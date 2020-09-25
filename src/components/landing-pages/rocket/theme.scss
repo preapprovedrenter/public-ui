@@ -1,0 +1,49 @@
+/*
+
+=========================================================
+* Rocket - Startup Bootstrap Template
+=========================================================
+
+* Product Page: https://themes.getbootstrap.com/product/rocket/
+* Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themes.getbootstrap.com/licenses/)
+
+* Coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400i,700i&display=swap');
+
+// Bootstrap mixins and functions
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+
+// Change variables here
+@import "scss/variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Vendor
+@import "scss/vendor";
+
+// Rocket mixins & functions
+@import "scss/mixins";
+@import "scss/functions";
+
+// Utilities
+@import "scss/reboot";
+@import "scss/utilities";
+
+// Layout
+@import "scss/layout";
+
+// Components
+@import "scss/components";
+
+// write your custom styles here!
