@@ -47,3 +47,10 @@
 @import "scss/components";
 
 // write your custom styles here!
+.signup-checkboxes-white-bg {
+    text-align: justify;
+    a {
+        color: #1976D2 !important;
+        transition: all 0.2s ease !important;
+    }
+}
