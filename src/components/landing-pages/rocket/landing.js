@@ -33,8 +33,11 @@ const SecondPage = () => (
                         <div className="container">
                             <a className="navbar-brand" href="../index.html">
                                 <div className="d-flex align-items-center">
-                                    <img className="navbar-brand-dark rotate-logo" src="/img/brand/logo-xl.png" alt="Logo" />
-                               </div>
+                                    <div className="brand-icon-wrapper">
+                                        <img className="navbar-brand-dark rotate-logo" src="/img/brand/icon.svg" alt="Logo" />
+                                    </div>
+                                    <span>PreApproved Renter</span>
+                                </div>
                             </a>
                             <div className="navbar-collapse collapse" id="navbar_global">
                                 <div className="navbar-collapse-header">
@@ -52,14 +55,9 @@ const SecondPage = () => (
                                 </div>
                             </div>
                             <ul className="navbar-nav navbar-nav-hover justify-content-center">
-                                <li className="nav-item">
-                                    <a href="../index.html" className="nav-link">Overview</a>
-                                </li>
                             </ul>
                         </div>
                         <div className="d-none d-lg-block">
-                            <a href="https://themes.getbootstrap.com/product/rocket/" target="_blank" className="btn btn-secondary btn-pricing-plan animate-up-2 mr-3"><i className="fas fa-shopping-cart mr-2"></i> Buy now</a>
-                            <a href="https://themesberg.com/docs/rocket/getting-started/overview/" target="_blank" className="btn btn-outline-white btn-docs animate-up-2"><i className="fas fa-book mr-2"></i> Docs v2.0</a>
                         </div>
                         <div className="d-flex d-lg-none align-items-center ml-auto">
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
@@ -78,9 +76,9 @@ const SecondPage = () => (
                     <div className="container">
                         <div className="row justify-content-between align-items-center">
                             <div className="col-12 col-lg-6">
-                                <h2 className="h4 font-weight-normal text-muted">Real Estate Solutions to</h2>
-                                <h1 className="display-1 mb-4">Rent Applications</h1>
-                                <p className="lead mb-3 mb-lg-5">Customize your rental applications and screen tenants instantly. <strong>Completely FREE for Brokers & Property Managers.</strong></p>
+                                <h2 className="h4 font-weight-normal text-muted">Real Estate Solutions to Customize Your Rental Application</h2>
+                                <h1 className="display-1 mb-4">Screen Tenants Instantly</h1>
+                                <p className="lead mb-3 mb-lg-5"><strong>Completely FREE for Brokers & Property Managers.</strong></p>
                                 <a className="btn btn-secondary animate-up-2 mb-5 mb-lg-0" target="_blank" href="https://themesberg.com/docs/rocket/getting-started/overview/"><i className="fas fa-file-alt mr-2"></i>View Demo</a>
                             </div>
                             <div className="col-12 col-lg-5">
@@ -90,7 +88,8 @@ const SecondPage = () => (
                                             <div className="form-group mb-4">
                                                 <label className="h6 text-dark" htmlFor="account-type">Account Type</label>
                                                 <div className="position-relative">
-                                                    <select className="custom-select" id="account-type" required="" defaultValue="agent">
+                                                    <select className="custom-select" id="account-type" required>
+                                                        <option value="" disabled selected hidden>Please choose one</option>
                                                         <option value="agent">I'm a Real Estate Agent</option>
                                                         <option value="manager">I'm a Property Manager</option>
                                                         <option value="landlord">I'm a Landlord</option>
@@ -140,27 +139,24 @@ const SecondPage = () => (
                     <div className="pattern bottom"></div>
                 </section>
 
-                <div className="section section-sm py-5">
+                <div className="clients section section-sm py-5">
                     <div className="container">
                         <div className="row">
                             <div className="col-12 text-gray text-center">
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <span className="fab fa-stripe"></span>
+                                    <img src="/img/clients/keller-williams-realty.svg" alt="icon" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <span className="fab fa-digg"></span>
+                                    <img src="/img/clients/coldwell-banker-reliable.png" alt="icon" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <span className="fab fa-fedex"></span>
+                                    <img src="/img/clients/the-corcoran-group.svg" alt="icon" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <span className="fab fa-ember"></span>
+                                    <img src="/img/clients/eXp-realty.png" alt="icon" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <span className="fab fa-d-and-d-beyond"></span>
-                                </div>
-                                <div className="icon icon-xl">
-                                    <span className="fab fa-angrycreative"></span>
+                                    <img src="/img/clients/halstead.gif" alt="icon" />
                                 </div>
                             </div>
                         </div>
@@ -172,7 +168,14 @@ const SecondPage = () => (
                         <div className="row justify-content-center mb-5 mb-lg-6">
                             <div className="col-12 col-md-8 text-center">
                                 <h2 className="h1 font-weight-bolder mb-4">Who is PreApproved Renter for?</h2>
-                                <p className="lead">Self-Service Analytics or ad hoc reporting gives users the ability to develop rapid reports, empowering users to analyze their data.</p>
+                                <p className="lead">
+                                    PreApproved Renter is for Real Estate
+                                    Professionals looking for an easy to use
+                                    rental application form that can run
+                                    credit and background checks.
+                                    <br/>
+                                    Here’s how it works:
+                                </p>
                             </div>
                         </div>
                         <div className="row">
@@ -183,8 +186,15 @@ const SecondPage = () => (
                                             <img src="/img/icons/envelope.svg" alt="icon" />
                                         </div>
                                         <h2 className="h4 mt-3">You send a link</h2>
-                                        <p className="mb-0">Sign up and get a unique link to your application. We also have links to 100s of other landlord applications. Simply send your applicant a link and they'll fill out an online application form.
-</p>
+                                        <p className="mb-0">
+                                            Sign up and get a unique link to
+                                            your application. We also have
+                                            links to 100s of standard
+                                            applications.<br/>
+                                            Simply send your applicant a link
+                                            and they'll fill out an online
+                                            application form.
+                                        </p>
                                     </div>
                                     <div className="card-body">
                                     </div>
@@ -251,7 +261,7 @@ const SecondPage = () => (
                                 </a>
                             </div>
                             <div className="col-12 col-lg-6 mr-lg-auto">
-                                <img src="https://preapprovedrenter.com/app/img/webapp4.png" className="img-thumbnail" alt="image" />
+                                <img src="https://preapprovedrenter.com/app/img/webapp4.png" className="img-thumbnail" alt="Form Builder Screenshot" />
                             </div>
                         </div>
                         <div className="row row-grid align-items-center mb-7">
@@ -267,7 +277,7 @@ const SecondPage = () => (
                                 </a>
                             </div>
                             <div className="col-12 col-lg-6 ml-lg-auto">
-                                <img src="https://preapprovedrenter.com/app/img/webapp3.png" className="img-thumbnail" alt="image" />
+                                <img src="/img/illustrations/credit-report.png" className="img-thumbnail" alt="Sample Credit Report Screenshot" />
                             </div>
                         </div>
                         <div className="row row-grid align-items-center">
@@ -275,15 +285,9 @@ const SecondPage = () => (
                                 <h2 className="font-weight-bolder mb-4">Autogenerate Leases with Dotloop</h2>
                                 <p>Our application is able to automatically generate leases, riders, disclosure forms and similar documents.</p>
                                 <p>We have partnered with dotloop - the leading real estate transaction management system - to help facilitate this.</p>
-                                <a href="./dashboard/app-analysis.html" className="btn btn-primary mt-3 animate-up-2">
-                                    Sample Lease
-                                    <span className="icon icon-xs ml-2">
-                                        <i className="fas fa-external-link-alt"></i>
-                                    </span>
-                                </a>
                             </div>
                             <div className="col-12 col-lg-6 mr-lg-auto">
-                                <img src="https://preapprovedrenter.com/app/img/webapp3.png" className="img-thumbnail" alt="image" />
+                                <img src="https://preapprovedrenter.com/app/img/webapp5.png" className="img-thumbnail" alt="Sample Lease Screenshot" />
                             </div>
                         </div>
                     </div>
@@ -295,8 +299,10 @@ const SecondPage = () => (
                         <div className="container">
                             <div className="row text-white">
                                 <div className="col-md-6 col-lg-8 text-center mx-auto">
-                                    <h2 className="h1 mb-4">More Rocket perks</h2>
-                                    <p className="lead">The best and most complete data in the industry powers Rocket's tools
+                                    <h2 className="h1 mb-4">PreApproved Renter perks</h2>
+                                    <p className="lead">
+                                        Learn more about some of the benefits
+                                        of using our service
                                     </p>
                                 </div>
                             </div>
@@ -312,11 +318,11 @@ const SecondPage = () => (
                                                     </div>
                                                 </div>
                                                 <div className="pl-4">
-                                                    <h5 className="mb-3">24/5 customer support</h5>
-                                                    <p className="icon-box-text">Have a question, concern or feedback for us? Our support team is a quick chat or email away — 24 hours a day, Monday to Friday.</p>
-                                                    <a href="./support-topic.html" className="btn btn-sm btn-primary">
-                                                        Read more
-                                                        <i className="fas fa-link ml-1"></i>
+                                                    <h5 className="mb-3">Custom Support 7 Days a Week</h5>
+                                                    <p className="icon-box-text">Have a question, concern or feedback for us? Our support team is a quick chat or email away.</p>
+                                                    <a href="mailto:support@preapprovedrenter.com" className="btn btn-sm btn-primary">
+                                                        Email Us
+                                                        <i className="fas fa-envelope ml-1"></i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -331,14 +337,23 @@ const SecondPage = () => (
                                             <div className="d-flex p-3">
                                                 <div>
                                                     <div className="icon icon-primary">
-                                                        <span className="fas fa-users"></span>
+                                                        <span className="fas fa-lock"></span>
                                                     </div>
                                                 </div>
                                                 <div className="pl-4">
-                                                    <h5 className="icon-box-title">Private community</h5>
-                                                    <p className="icon-box-text">Take full advantage of insights from highly-accomplished SEO specialists and digital marketers in our customers-only community.</p>
+                                                    <h5 className="icon-box-title">
+                                                        Highest Industry Standard for Security
+                                                    </h5>
+                                                    <p className="icon-box-text">
+                                                        PreApprovedRenter uses
+                                                        the industries highest
+                                                        standards for security.
+                                                        <br/>
+                                                        Get a full copy of our
+                                                        ISO/IEC 27001 Report.
+                                                    </p>
                                                     <a href="./support-topic.html" className="btn btn-sm btn-primary">
-                                                        Read more
+                                                        Learn more
                                                         <i className="fas fa-link ml-1"></i>
                                                     </a>
                                                 </div>
@@ -359,10 +374,10 @@ const SecondPage = () => (
                                                 </div>
                                                 <div className="pl-4">
                                                     <h5 className="icon-box-title">Learning materials</h5>
-                                                    <p className="icon-box-text">The marketing tutorials on our blog and YouTube channel, and in the Rocket Academy, often feature our tools.</p>
+                                                    <p className="icon-box-text">The marketing tutorials on our blog and YouTube channel, often feature our tools.</p>
                                                     <a href="./support-topic.html" className="btn btn-sm btn-primary">
-                                                        Read more
-                                                        <i className="fas fa-link ml-1"></i>
+                                                        Visit Our Blog
+                                                        <i className="fas fa-bookmark ml-1"></i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -383,10 +398,6 @@ const SecondPage = () => (
                                                 <div className="pl-4">
                                                     <h5 className="icon-box-title">Features released regularly</h5>
                                                     <p className="icon-box-text">We frequently update existing tools and release new features — many of which are heavily influenced by requests from our customers.</p>
-                                                    <a href="./support-topic.html" className="btn btn-sm btn-primary">
-                                                        Read more
-                                                        <i className="fas fa-link ml-1"></i>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -404,7 +415,7 @@ const SecondPage = () => (
                         <div className="row justify-content-center mb-5 mb-lg-7">
                             <div className="col-12 col-md-8 text-center">
                                 <h1 className="h1 mb-4">Recommended by leading experts in Real Estate</h1>
-                                <p className="lead">Our products are loved by users worldwide</p>
+                                <p className="lead">Our products are loved by users across the US</p>
                             </div>
                         </div>
                         <div className="row mb-lg-5">
@@ -481,29 +492,9 @@ const SecondPage = () => (
                     <div className="container">
                         <div className="row"> 
                             <div className="col-12 text-center mb-5">
-                                <h2 className="mb-4">Faster growth starts with Rocket</h2>
-                                <p className="lead mb-5">Join over <span className="font-weight-bolder">300,000+</span> users</p>
-                                <a href="#" className="icon icon-lg text-gray mr-3">
-                                    <span className="fab fa-mailchimp"></span>
-                                </a>
-                                <a href="#" className="icon icon-lg text-gray mr-3">
-                                    <span className="fab fa-cpanel"></span>
-                                </a>
-                                <a href="#" className="icon icon-lg text-gray mr-3">
-                                    <span className="fab fa-dhl"></span>
-                                </a>
-                                <a href="#" className="icon icon-lg text-gray mr-3 ">
-                                    <span className="fab fa-github-alt"></span>
-                                </a>
-                                <a href="#" className="icon icon-lg text-gray mr-3">
-                                    <span className="fab fa-aws"></span>
-                                </a>
-                                <a href="#" className="icon icon-lg text-gray">
-                                    <span className="fab fa-node"></span>
-                                </a>
-                            </div>
-                            <div className="col-12 text-center">
-                                <button type="button" className="btn btn-secondary animate-up-2" data-toggle="modal" data-target=".pricing-modal"><span className="mr-2"><i className="fas fa-hand-pointer"></i></span>Start 30-days trial</button>
+                                <h2 className="mb-4">Tenant Screening Starts with PreApproved Renter</h2>
+                                <p className="lead mb-5">As featured in the</p>
+                                <img width="300" src="/img/icons/the-new-york-times.svg" alt="The New York Times logo" />
                             </div>
                         </div> 
                     </div>    
@@ -571,11 +562,11 @@ const SecondPage = () => (
 
                         <div className="row">
                             <div className="col-lg-4 mb-4 mb-lg-0">
-                                <a className="footer-brand mr-lg-5 d-flex" href="../index.html">
-                                    <div style={{backgroundColor: "#ffffff", width: "40px", height: "fit-content"}}>
-                                        <img src="/img/brand/icon.svg" className="mr-3" alt="Footer logo" />
+                                <a className="footer-brand mr-lg-5 d-flex align-items-center" href="../index.html">
+                                    <div className="brand-icon-wrapper">
+                                        <img src="/img/brand/icon.svg" alt="Footer logo" />
                                     </div>
-                                    <h4 className="mt-1">PreApproved Renter</h4>
+                                    <span>PreApproved Renter</span>
                                 </a>
                                 <p className="my-4"></p>
                             </div>

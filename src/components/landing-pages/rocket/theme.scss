@@ -47,10 +47,26 @@
 @import "scss/components";
 
 // write your custom styles here!
+.brand-icon-wrapper {
+    background-color: rgb(255, 255, 255);
+    height: "fit-content";
+}
+
 .signup-checkboxes-white-bg {
     text-align: justify;
     a {
         color: #1976D2 !important;
         transition: all 0.2s ease !important;
+    }
+}
+
+.clients.section {
+    .icon {
+        height: 100px;
+        vertical-align: middle;
+
+        img {
+            width: 100px;
+        }
     }
 }

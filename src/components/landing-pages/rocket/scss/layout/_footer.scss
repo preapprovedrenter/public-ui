@@ -82,12 +82,12 @@
         }
     
         img {
-            height: 40px;
-            width: 40px;
+            height: 64px;
+
         }
         &:hover,
         &:focus{
-            color: $black;
+            //color: $black;
         }
     }
     .footer-language-link{
