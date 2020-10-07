@@ -8,8 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
-import Header from "./header"
 //import "./layout.css"
 import './landing-pages/rocket/theme.scss'
 import '../../static/vendor/@fortawesome/fontawesome-free/css/all.min.css'
@@ -27,7 +27,8 @@ const Layout = ({ children }) => {
 
   return (
     <main>
-        {children}
+      <Helmet title={data.title} />
+      {children}
     </main>
   )
 }

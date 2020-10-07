@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
 const Header = () => (
@@ -17,7 +16,9 @@ const Header = () => (
                             <div className="col-6 collapse-close">
                                 <a href="#navbar_global" className="fas fa-times" data-toggle="collapse"
                                 data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
-                                aria-label="Toggle navigation"></a>
+                                aria-label="Toggle navigation">
+                                    <span className="sr-only">Toggle navigation</span>
+                                </a>
                             </div>
                         </div>
                     </div>

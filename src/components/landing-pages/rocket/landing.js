@@ -10,7 +10,7 @@ const LandingPage = () => (
                         <h2 className="h4 font-weight-normal text-muted">Customize Your Rental Application</h2>
                         <h1 className="display-1 mb-4">Screen Tenants Instantly</h1>
                         <p className="lead mb-3 mb-lg-5"><strong>Completely FREE for Brokers & Property Managers.</strong></p>
-                        <a className="btn btn-secondary animate-up-2 mb-5 mb-lg-0" target="_blank" href="https://themesberg.com/docs/rocket/getting-started/overview/"><i className="fas fa-file-alt mr-2"></i>View Demo</a>
+                        <a className="btn btn-secondary animate-up-2 mb-5 mb-lg-0" href="https://themesberg.com/docs/rocket/getting-started/overview/"><i className="fas fa-file-alt mr-2"></i>View Demo</a>
                         <Link to="/login" className="btn btn-outline-white animate-up-2 mb-5 mb-lg-0 ml-3">
                             <i className="fas fa-sign-in-alt mr-2"></i> Login
                         </Link>
@@ -22,8 +22,8 @@ const LandingPage = () => (
                                     <div className="form-group mb-4">
                                         <label className="h6 text-dark" htmlFor="account-type">Account Type</label>
                                         <div className="position-relative">
-                                            <select className="custom-select" id="account-type" required>
-                                                <option value="" disabled selected hidden>Please choose one</option>
+                                            <select className="custom-select" id="account-type" required defaultValue="">
+                                                <option value="" disabled hidden>Please choose one</option>
                                                 <option value="agent">I'm a Real Estate Agent</option>
                                                 <option value="manager">I'm a Property Manager</option>
                                                 <option value="landlord">I'm a Landlord</option>
@@ -47,16 +47,16 @@ const LandingPage = () => (
                                                 <input type="checkbox" name="tos" ng-model="data.tos" required />&nbsp;
                                                 <span>
                                                     By signing up I agree to&nbsp;
-                                                    <a href="https://preapprovedrenter.com/tos/customers/" target="_blank" className="text-action">
+                                                    <a href="https://preapprovedrenter.com/tos/customers/" className="text-action">
                                                         customer terms of use
                                                     </a> or&nbsp;
-                                                    <a href="https://preapprovedrenter.com/tos/applicant/" target="_blank">
+                                                    <a href="https://preapprovedrenter.com/tos/applicant/" >
                                                         user terms of use
                                                     </a> along with the Transunion&nbsp;
-                                                    <a href="https://preapprovedrenter.com/sm/end-user-agreement/" target="_blank">
+                                                    <a href="https://preapprovedrenter.com/sm/end-user-agreement/" >
                                                         end user agreement
                                                     </a> or&nbsp;
-                                                    <a href="https://preapprovedrenter.com/sm/consumer-agreement/" target="_blank">
+                                                    <a href="https://preapprovedrenter.com/sm/consumer-agreement/" >
                                                         consumer agreement
                                                     </a>.
                                                 </span>
@@ -434,53 +434,6 @@ const LandingPage = () => (
             </div>    
         </section>
 
-        <div id="pricing-modal" className="modal fade pricing-modal" tabIndex="-1" role="dialog" aria-hidden="true">
-            <div className="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div className="modal-content py-4">
-                    <div className="px-3">
-                        <div className="col-12 d-flex justify-content-end d-lg-none">
-                            <i className="fas fa-times" data-dismiss="modal" aria-label="Close"></i>
-                        </div>
-                    </div>
-                    <div className="modal-header text-center text-black">
-                        <div className="col-12">
-                            <h4 className="px-lg-6">Our 30-days trial gives you full access to all tools and features of your chosen plan.</h4>
-                        </div>
-                    </div>
-                    <div className="modal-body">
-                        <div className="row">
-                            <div className="col-12 col-lg-6 text-left">
-                                <div className="form-check card border-light p-3">
-                                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
-                                    <label className="form-check-label" htmlFor="exampleRadios1">
-                                        <span className="h6 text-black d-block">Free</span>
-                                        <span className="small text-gray">30 days for free, then $99/mo</span> 
-                                        <span className="text-gray mt-3 d-block p">Suits freelance marketers and solopreneurs. Get full access to Ahrefs' core tools and features with enough data to do SEO for your personal projects.</span> 
-                                    </label>
-                                </div>
-                            </div>
-                            <div className="col-12 col-lg-6 text-left">
-                                <div className="form-check  card border-light p-3">
-                                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked />
-                                    <label className="form-check-label" htmlFor="exampleRadios2">
-                                        <span className="h6 text-black d-block">Premium</span>
-                                        <span className="small text-gray">200$/mo</span> 
-                                        <span className="text-gray mt-3 d-block p">Perfect for SEO consultants and in-house marketers. Get everything in Lite with more features and increased data limits to research a large number of websites.</span> 
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="modal-footer border-0 text-center">
-                        <div className="col text-gray">
-                            <a href="../pages/checkout.html" className="btn btn-primary mb-4">Continue</a>
-                            <p className="small mb-0">You can upgrade, downgrade, or cancel your subscription anytime.<br/>No contracts, no hidden charges.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <footer className="footer section pt-6 pt-md-8 pt-lg-10 pb-3 bg-primary text-white overflow-hidden">
             <div className="pattern top pattern-soft"></div>
             <div className="container">
@@ -488,7 +441,7 @@ const LandingPage = () => (
                     <div className="col-lg-12 mb-6 text-center" style={{fontSize: "2em"}}>
                         Try it! It's Completely FREE for brokers, landlords & property managers...
                         <div className="mt-4">
-                            <a href="https://themes.getbootstrap.com/product/rocket/" target="_blank" className="btn btn-secondary btn-pricing-plan animate-up-2 mr-3">SIGN UP</a>
+                            <a href="https://themes.getbootstrap.com/product/rocket/" className="btn btn-secondary btn-pricing-plan animate-up-2 mr-3">SIGN UP</a>
                             <Link to="/login" className="btn btn-outline-white animate-up-2">
                                 <i className="fas fa-sign-in-alt mr-2"></i> LOG IN
                             </Link>
@@ -505,9 +458,9 @@ const LandingPage = () => (
                     </div>
                     <div className="col-6 col-sm-6 col-lg-4 mb-4 mb-lg-0">
                         <ul className="links-vertical">
-                        <li><a target="_blank" href="https://themesberg.com/products">Sign up</a></li>
-                            <li><a target="_blank" href="https://themesberg.com/blog">Blog</a></li>
-                            <li><a target="_blank" href="https://themesberg.com/contact">Contact Us</a></li>
+                        <li><a href="https://themesberg.com/products">Sign up</a></li>
+                            <li><a href="https://themesberg.com/blog">Blog</a></li>
+                            <li><a href="https://themesberg.com/contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <div className="col-6 col-sm-6 col-lg-4 mb-4 mb-lg-0">

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, withPrefix } from "gatsby"
+import { withPrefix } from "gatsby"
 
 import { Helmet } from "react-helmet"
 
