@@ -81,13 +81,13 @@ const LandingPage = () => (
                             <img src="/img/clients/keller-williams-realty.svg" alt="icon" />
                         </div>
                         <div className="icon icon-xl mr-2 mr-sm-5">
-                            <img src="/img/clients/coldwell-banker-reliable.png" alt="icon" />
+                            <img src="/img/clients/coldwell-banker-reliable.svg" alt="icon" />
                         </div>
                         <div className="icon icon-xl mr-2 mr-sm-5">
                             <img src="/img/clients/the-corcoran-group.svg" alt="icon" />
                         </div>
                         <div className="icon icon-xl mr-2 mr-sm-5">
-                            <img src="/img/clients/eXp-realty.png" alt="icon" />
+                            <img src="/img/clients/eXp-realty.svg" alt="icon" />
                         </div>
                         <div className="icon icon-xl mr-2 mr-sm-5">
                             <img src="/img/clients/halstead.gif" alt="icon" />
