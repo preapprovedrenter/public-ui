@@ -195,7 +195,7 @@ const LandingPage = () => (
                         </a>
                     </div>
                     <div className="col-12 col-lg-6 mr-lg-auto">
-                        <img src="/img/illustrations/webapp4.jp2" className="img-thumbnail" alt="Form Builder Screenshot" />
+                        <img src="/img/illustrations/webapp4.jpg" className="img-thumbnail" alt="Form Builder Screenshot" />
                     </div>
                 </div>
                 <div className="row row-grid align-items-center mb-7">
@@ -211,7 +211,7 @@ const LandingPage = () => (
                         </a>
                     </div>
                     <div className="col-12 col-lg-6 ml-lg-auto">
-                        <img src="/img/illustrations/credit-report.jp2" className="img-thumbnail" alt="Sample Credit Report Screenshot" />
+                        <img src="/img/illustrations/credit-report.jpg" className="img-thumbnail" alt="Sample Credit Report Screenshot" />
                     </div>
                 </div>
                 <div className="row row-grid align-items-center">
@@ -221,7 +221,7 @@ const LandingPage = () => (
                         <p>We have partnered with dotloop - the leading real estate transaction management system - to help facilitate this.</p>
                     </div>
                     <div className="col-12 col-lg-6 mr-lg-auto">
-                        <img src="/img/illustrations/webapp5.jp2" className="img-thumbnail" alt="Sample Lease Screenshot" />
+                        <img src="/img/illustrations/webapp5.jpg" className="img-thumbnail" alt="Sample Lease Screenshot" />
                     </div>
                 </div>
             </div>
