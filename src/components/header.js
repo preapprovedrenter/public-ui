@@ -8,10 +8,7 @@ const Header = () => (
             <div className="container">
                 <Link to="/" className="navbar-brand">
                     <div className="d-flex align-items-center">
-                        <div className="brand-icon-wrapper">
-                            <img className="navbar-brand-dark rotate-logo" src="/img/brand/icon.svg" alt="Logo" />
-                        </div>
-                        <span>PreApproved Renter</span>
+                        <img className="navbar-brand-dark rotate-logo" src="/img/brand/logo.svg" alt="Logo" />
                     </div>
                 </Link>
                 <div className="navbar-collapse collapse" id="navbar_global">

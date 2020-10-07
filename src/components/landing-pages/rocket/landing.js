@@ -499,10 +499,7 @@ const LandingPage = () => (
                 <div className="row">
                     <div className="col-lg-4 mb-4 mb-lg-0">
                         <a className="footer-brand mr-lg-5 d-flex align-items-center" href="../index.html">
-                            <div className="brand-icon-wrapper">
-                                <img src="/img/brand/icon.svg" alt="Footer logo" />
-                            </div>
-                            <span>PreApproved Renter</span>
+                            <img src="/img/brand/logo.svg" alt="Footer logo" />
                         </a>
                         <p className="my-4"></p>
                     </div>
