@@ -11,6 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 //import "./layout.css"
+import './landing-pages/rocket/theme.scss'
+import '../../static/vendor/@fortawesome/fontawesome-free/css/all.min.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,9 +26,9 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <main>
         {children}
-    </>
+    </main>
   )
 }
 

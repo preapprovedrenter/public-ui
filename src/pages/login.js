@@ -1,18 +1,18 @@
 import React from "react"
 
-import Page from "../components/landing-pages/rocket/landing"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import LoginPage from "../components/landing-pages/rocket/login"
 import VendorsHeader from "../components/landing-pages/rocket/vendors"
 import Header from "../components/header"
+import SEO from "../components/seo"
 
-const IndexPage = () => (
+const Page = () => (
     <Layout>
-        <SEO title="Home" />
+        <SEO title="Log in" />
         <VendorsHeader/>
         <Header/>
-        <Page/>
+        <LoginPage/>
     </Layout>
 )
 
-export default IndexPage
+export default Page

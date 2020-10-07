@@ -2,41 +2,42 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = () => (
+    <header className="header-global bg-primary">
+        <nav id="navbar-main" className="navbar navbar-main navbar-expand-lg navbar-dark navbar-theme-primary headroom py-lg-2 px-lg-6">
+            <div className="container">
+                <Link to="/" className="navbar-brand">
+                    <div className="d-flex align-items-center">
+                        <div className="brand-icon-wrapper">
+                            <img className="navbar-brand-dark rotate-logo" src="/img/brand/icon.svg" alt="Logo" />
+                        </div>
+                        <span>PreApproved Renter</span>
+                    </div>
+                </Link>
+                <div className="navbar-collapse collapse" id="navbar_global">
+                    <div className="navbar-collapse-header">
+                        <div className="row">
+                            <div className="col-6 collapse-close">
+                                <a href="#navbar_global" className="fas fa-times" data-toggle="collapse"
+                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                aria-label="Toggle navigation"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul className="navbar-nav navbar-nav-hover justify-content-center">
+                    </ul>
+                </div>
+                <div className="d-none d-lg-block">
+                </div>
+                <div className="d-none d-lg-none align-items-center ml-auto">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                    aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

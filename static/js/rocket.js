@@ -22,7 +22,7 @@ $(document).ready(function () {
     // preloader
     var $preloader = $('.preloader');
     if($preloader.length) {
-        $preloader.delay(500).fadeOut('slow');
+        $preloader.show().delay(500).fadeOut('slow');
     }
 
     // options
@@ -266,16 +266,6 @@ $(document).ready(function () {
             });
     }
 
-    //Countdown
-    $('#clock').countdown('2020/10/10').on('update.countdown', function (event) {
-        var $this = $(this).html(event.strftime(''
-            + '<span>%-w</span> week%!w '
-            + '<span>%-d</span> day%!d '
-            + '<span>%H</span> hr '
-            + '<span>%M</span> min '
-            + '<span>%S</span> sec'));
-    });
-
     //Smooth scroll
     var scroll = new SmoothScroll('a[href*="#"]', {
         speed: 500,
@@ -317,8 +307,5 @@ $(document).ready(function () {
             $copy.removeClass('copied');
         }, 1000);
     });
-
-    $('.current-year').text(new Date().getFullYear());
-
 });
 
