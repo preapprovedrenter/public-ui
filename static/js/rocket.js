@@ -106,18 +106,6 @@ $(document).ready(function () {
         });
     }
 
-    // Headroom - show/hide navbar on scroll
-    if ($('.headroom')[0]) {
-        var headroom = new Headroom(document.querySelector("#navbar-main"), {
-            offset: 0,
-            tolerance: {
-                up: 1,
-                down: 0
-            },
-        });
-        headroom.init();
-    }
-
     // Background images for sections
     $('[data-background]').each(function () {
         $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');

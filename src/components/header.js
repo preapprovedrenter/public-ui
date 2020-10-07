@@ -4,7 +4,7 @@ import React from "react"
 
 const Header = () => (
     <header className="header-global bg-primary">
-        <nav id="navbar-main" className="navbar navbar-main navbar-expand-lg navbar-dark navbar-theme-primary headroom py-lg-2 px-lg-6">
+        <nav id="navbar-main" className="navbar navbar-main navbar-expand-lg navbar-dark navbar-theme-primary py-lg-2 px-lg-6">
             <div className="container">
                 <Link to="/" className="navbar-brand">
                     <div className="d-flex align-items-center">

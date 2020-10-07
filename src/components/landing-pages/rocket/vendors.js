@@ -10,7 +10,6 @@ const VendorsHeader = () => (
     <Helmet>
         <script src={withPrefix('vendor/popper.js/dist/umd/popper.min.js')} type="text/javascript" defer />
         <script src={withPrefix('vendor/bootstrap/dist/js/bootstrap.min.js')} type="text/javascript" defer />
-        <script src={withPrefix('vendor/headroom.js/dist/headroom.min.js')} type="text/javascript" defer />
 
         <script src={withPrefix('vendor/countup.js/dist/countUp.min.js')} type="text/javascript" defer />
         <script src={withPrefix('vendor/jquery-countdown/dist/jquery.countdown.min.js')} type="text/javascript" defer />
