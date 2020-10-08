@@ -119,7 +119,7 @@ const LandingPage = ({ data }) => (
                                     <img src="/img/clients/eXp-realty.svg" alt="icon" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <img src="/img/clients/halstead.gif" alt="icon" />
+                                    <img src="/img/clients/halstead.svg" alt="icon" />
                                 </div>
                             </div>
                         </div>
