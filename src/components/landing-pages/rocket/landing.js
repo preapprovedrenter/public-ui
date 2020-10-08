@@ -237,7 +237,7 @@ const LandingPage = ({ data }) => (
                                     </span>
                                 </a>
                             </div>
-                            <div className="col-12 col-lg-6 ml-lg-auto">
+                            <div className="col-12 col-lg-6 ml-lg-auto text-right">
                                 <Img fixed={data.creditReport.childImageSharp.fixed} className="img-thumbnail" alt="Sample Credit Report Screenshot" />
                             </div>
                         </div>
