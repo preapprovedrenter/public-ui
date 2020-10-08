@@ -9,7 +9,7 @@ import '../../../../static/vendor/@fortawesome/fontawesome-free/css/all.min.css'
 const VendorsHeader = () => (
     <Helmet>
         <script src={withPrefix('vendor/popper.js/dist/umd/popper.min.js')} type="text/javascript" defer />
-        <script src={withPrefix('vendor/bootstrap/dist/js/bootstrap.min.js')} type="text/javascript" defer />
+        <script src={withPrefix('vendor/bootstrap/dist/js/bootstrap.bundle.min.js')} type="text/javascript" defer />
 
         <script src={withPrefix('js/rocket.js')} type="text/javascript" defer />
     </Helmet>
