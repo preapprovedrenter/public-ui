@@ -254,12 +254,6 @@ $(document).ready(function () {
             });
     }
 
-    //Smooth scroll
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 500,
-        speedAsDuration: true
-    });
-
     // update target element content to match number of characters
     $('[data-bind-characters-target]').each(function () {
         var $text = $($(this).attr('data-bind-characters-target'));
