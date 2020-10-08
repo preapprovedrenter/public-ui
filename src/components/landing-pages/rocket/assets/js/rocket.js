@@ -17,13 +17,7 @@
 
 
 "use strict";
-$(document).ready(function () {
-
-    // preloader
-    var $preloader = $('.preloader');
-    if($preloader.length) {
-        $preloader.delay(500).fadeOut('slow');
-    }
+/* $(document).ready(function () {
 
     // options
     var breakpoints = {
@@ -177,5 +171,5 @@ $(document).ready(function () {
     });
 
     $('.current-year').text(new Date().getFullYear());
-});
+}); */
 

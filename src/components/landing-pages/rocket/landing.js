@@ -27,6 +27,34 @@ const LandingPage = ({ data }) => (
                             ...GatsbyImageSharpFixed
                         }
                     }
+                },
+                usersMoshe: file(relativePath: {glob: "users/moshe-kanarfogel.jpg"}) {
+                    childImageSharp {
+                        fixed(width: 48, height: 48) {
+                            src
+                        }
+                    }
+                },
+                usersMichael: file(relativePath: {glob: "users/michael-apfelbaum.jpg"}) {
+                    childImageSharp {
+                        fixed(width: 48, height: 48) {
+                            src
+                        }
+                    }
+                },
+                usersDylan: file(relativePath: {glob: "users/dylan-pichulik.jpg"}) {
+                    childImageSharp {
+                        fixed(width: 48, height: 48) {
+                            src
+                        }
+                    }
+                },
+                usersMaria: file(relativePath: {glob: "users/maria-goris.jpg"}) {
+                    childImageSharp {
+                        fixed(width: 48, height: 48) {
+                            src
+                        }
+                    }
                 }
             }
         `}
@@ -382,7 +410,7 @@ const LandingPage = ({ data }) => (
                         <div className="row mb-lg-5">
                             <div className="col-12 col-lg-6">
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src="/img/users/moshe-kanarfogel.jpg" className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersMoshe.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
@@ -396,7 +424,7 @@ const LandingPage = ({ data }) => (
                                     </div>
                                 </div>
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src="/img/users/michael-apfelbaum.jpg" className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersMichael.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
@@ -412,7 +440,7 @@ const LandingPage = ({ data }) => (
                             </div>
                             <div className="col-12 col-lg-6">
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src="/img/users/dylan-pichulik.jpg" className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersDylan.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
@@ -426,7 +454,7 @@ const LandingPage = ({ data }) => (
                                     </div>
                                 </div>
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src="/img/users/maria-goris.jpg" className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersMaria.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
