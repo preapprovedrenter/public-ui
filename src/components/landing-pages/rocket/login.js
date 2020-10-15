@@ -1,25 +1,60 @@
 import React, { useState } from "react"
-import { useInput } from './hooks/input';
+import { useStaticQuery, graphql } from "gatsby"
+import { useInput } from './hooks/input'
 
 const LoginPage = () => {
+    const data = useStaticQuery(graphql`
+        query APIURLQuery {
+            site {
+                siteMetadata {
+                    apiUrl
+                }
+            }
+        }
+    `)
     const username= useInput('');
     const password = useInput('');
-
     const [auth, setAuth] = useState({
         loading: false,
+        failure: false,
         isAuthenticated: false
     });
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        const state = {...auth, loading: true};
+        const state = {...auth, loading: true, failure: false};
         setAuth(state);
+
+        const url = `${data.site.siteMetadata.apiUrl}/auth/token`;
+        const formData = new FormData();
+
+        formData.append('username', username.value.toLowerCase());
+        formData.append('password', password.value);
+        formData.append('client_id', 'default');
+        formData.append('grant_type', 'password');
+
+        fetch(url, {method: 'POST', body: formData})
+            .then(response => response.json())
+            .then(response => {
+                const state = {...auth, loading: false};
+                state.failure = !!response.error;
+
+                setAuth(state);
+            });
     }
 
     return (
         <section className="vh-100 bg-soft d-flex align-items-center">
             <div className="container">
+                {auth.failure ? <div className="row justify-content-center">
+                    <div className="col-12 d-flex align-items-center justify-content-center">
+                        <div className="alert alert-danger w-100 fmxw-500" role="alert">
+                            Invalid credentials given. Please check your username and password and try again.
+                        </div>
+                    </div>
+                </div> : null}
+
                 <div className="row justify-content-center">
                     <div className="col-12 d-flex align-items-center justify-content-center">
                         <div className="signin-inner mt-3 mt-lg-0 bg-white shadow-soft border border-light rounded p-4 p-lg-5 w-100 fmxw-500">
