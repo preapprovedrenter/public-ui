@@ -35,7 +35,7 @@ const LandingPage = ({ data }) => (
                         }
                     }
                 },
-                usersMichael: file(relativePath: {glob: "users/michael-apfelbaum.jpg"}) {
+                usersCarnegieHill: file(relativePath: {glob: "users/carnegie-hill-properties.jpg"}) {
                     childImageSharp {
                         fixed(width: 48, height: 48) {
                             src
@@ -67,7 +67,6 @@ const LandingPage = ({ data }) => (
                                 <h2 className="h4 font-weight-normal text-muted">Customize Your Rental Application</h2>
                                 <h1 className="display-1 mb-4">Screen Tenants Instantly</h1>
                                 <p className="lead mb-3 mb-lg-5"><strong>Completely FREE for Brokers & Property Managers.</strong></p>
-                                <a className="btn btn-secondary animate-up-2 mb-5 mb-lg-0" href="https://themesberg.com/docs/rocket/getting-started/overview/"><i className="fas fa-file-alt mr-2"></i>View Demo</a>
                                 <Link to="/login" className="btn btn-outline-white animate-up-2 mb-5 mb-lg-0 ml-3">
                                     <i className="fas fa-sign-in-alt mr-2"></i> Login
                                 </Link>
@@ -104,16 +103,16 @@ const LandingPage = ({ data }) => (
                                                         <input type="checkbox" name="tos" ng-model="data.tos" required />&nbsp;
                                                         <span>
                                                             By signing up I agree to&nbsp;
-                                                            <a href="https://preapprovedrenter.com/tos/customers/" className="text-action">
+                                                            <a href="/tos/customers/" className="text-action">
                                                                 customer terms of use
                                                             </a> or&nbsp;
-                                                            <a href="https://preapprovedrenter.com/tos/applicant/" >
+                                                            <a href="/tos/applicant/" >
                                                                 user terms of use
                                                             </a> along with the Transunion&nbsp;
-                                                            <a href="https://preapprovedrenter.com/sm/end-user-agreement/" >
+                                                            <a href="/sm/end-user-agreement/" >
                                                                 end user agreement
                                                             </a> or&nbsp;
-                                                            <a href="https://preapprovedrenter.com/sm/consumer-agreement/" >
+                                                            <a href="/sm/consumer-agreement/" >
                                                                 consumer agreement
                                                             </a>.
                                                         </span>
@@ -242,7 +241,7 @@ const LandingPage = ({ data }) => (
                                 <h2 className="font-weight-bolder mb-4">Customize Your Application</h2>
                                 <p>We understand you may request specific information on your application.</p>
                                 <p>If you don't like our default form you can easily customize your own application using our drag-and-drop form builder.</p>
-                                <a href="./dashboard/traffic-sources.html" className="btn btn-primary mt-3 animate-up-2">
+                                <a href="/forms/?id=5cc1dc6857fc9b000812cfd7" className="btn btn-primary mt-3 animate-up-2">
                                     Sample Application Form
                                     <span className="icon icon-xs ml-2">
                                         <i className="fas fa-external-link-alt"></i>
@@ -341,7 +340,7 @@ const LandingPage = ({ data }) => (
                                                         Get a full copy of our
                                                         ISO/IEC 27001 Report.
                                                     </p>
-                                                    <a href="./support-topic.html" className="btn btn-sm btn-primary">
+                                                    <a href="/security/bitsight-technologies-iso-27001-report-2020-07-31.pdf" className="btn btn-sm btn-primary">
                                                         Learn more
                                                         <i className="fas fa-link ml-1"></i>
                                                     </a>
@@ -364,7 +363,7 @@ const LandingPage = ({ data }) => (
                                                 <div className="pl-4">
                                                     <h5 className="icon-box-title">Learning materials</h5>
                                                     <p className="icon-box-text">The marketing tutorials on our blog and YouTube channel, often feature our tools.</p>
-                                                    <a href="./support-topic.html" className="btn btn-sm btn-primary">
+                                                    <a href="https://blog.preapprovedrenter.com" className="btn btn-sm btn-primary">
                                                         Visit Our Blog
                                                         <i className="fas fa-bookmark ml-1"></i>
                                                     </a>
@@ -424,7 +423,7 @@ const LandingPage = ({ data }) => (
                                     </div>
                                 </div>
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src={data.usersMichael.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersCarnegieHill.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
@@ -434,7 +433,7 @@ const LandingPage = ({ data }) => (
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
                                         </div>
                                         <p className="mt-2">"We use PreApproved mainly for its ease of use, and it’s immensely simplified our leasing process. We use the service both to run transunion credit checks as well as for auto generating leases."</p>
-                                        <span className="h6">- Mike Apfelbaum <small className="ml-0 ml-md-2">Private Landlord</small></span>
+                                        <span className="h6">- Carnegie Hill Properties <small className="ml-0 ml-md-2"></small></span>
                                     </div>
                                 </div>
                             </div>
@@ -471,7 +470,7 @@ const LandingPage = ({ data }) => (
                         </div>
                         <div className="row">
                             <div className="col text-center">
-                                <a href="./testimonials.html" className="btn btn-primary animate-up-2"><span className="mr-2"><i className="fas fa-book-open"></i></span> See our reviews on Trust Pilot</a>
+                                <a href="https://www.trustpilot.com/review/preapprovedrenter.com" className="btn btn-primary animate-up-2"><span className="mr-2"><i className="fas fa-book-open"></i></span> See our reviews on Trust Pilot</a>
                             </div>
                         </div>
                     </div>
@@ -496,7 +495,9 @@ const LandingPage = ({ data }) => (
                             <div className="col-lg-12 mb-6 text-center" style={{fontSize: "2em"}}>
                                 Try it! It's Completely FREE for brokers, landlords & property managers...
                                 <div className="mt-4">
-                                    <a href="https://themes.getbootstrap.com/product/rocket/" className="btn btn-secondary btn-pricing-plan animate-up-2 mr-3">SIGN UP</a>
+                                    <Link to="/signup" className="btn btn-secondary btn-pricing-plan animate-up-2 mr-3">
+                                        SIGN UP
+                                    </Link>
                                     <Link to="/login" className="btn btn-outline-white animate-up-2">
                                         <i className="fas fa-sign-in-alt mr-2"></i> LOG IN
                                     </Link>
@@ -506,24 +507,24 @@ const LandingPage = ({ data }) => (
 
                         <div className="row">
                             <div className="col-lg-4 mb-4 mb-lg-0">
-                                <a className="footer-brand mr-lg-5 d-flex align-items-center" href="../index.html">
+                                <a className="footer-brand mr-lg-5 d-flex align-items-center" href="/">
                                     <img src="/img/brand/logo.svg" alt="Footer logo" />
                                 </a>
                                 <p className="my-4"></p>
                             </div>
                             <div className="col-6 col-sm-6 col-lg-4 mb-4 mb-lg-0">
                                 <ul className="links-vertical">
-                                <li><a href="https://themesberg.com/products">Sign up</a></li>
-                                    <li><a href="https://themesberg.com/blog">Blog</a></li>
-                                    <li><a href="https://themesberg.com/contact">Contact Us</a></li>
+                                    <li><Link to="/signup">Sign up</Link></li>
+                                    <li><a href="https://blog.preapprovedrenter.com">Blog</a></li>
+                                    <li><a href="mailto:support@preapprovedrenter.com">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div className="col-6 col-sm-6 col-lg-4 mb-4 mb-lg-0">
                                 <ul className="links-vertical">
-                                    <li><a href="../pages/about.html">Privacy Policy</a></li>
-                                    <li><a href="../pages/contact.html">My Payments Terms and Conditions</a></li>
-                                    <li><a href="https://themesberg.com/docs/rocket/getting-started/overview/">User Terms of Use</a></li>
-                                    <li><a href="../pages/pricing.html">Customer Terms &amp; Conditions</a></li>
+                                    <li><a href="/privacy/">Privacy Policy</a></li>
+                                    <li><a href="/tos/payments/">My Payments Terms and Conditions</a></li>
+                                    <li><a href="/tos/applicant/">User Terms of Use</a></li>
+                                    <li><a href="/tos/customers/">Customer Terms &amp; Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
