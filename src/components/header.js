@@ -6,7 +6,7 @@ const Header = () => (
         <nav id="navbar-main" className="navbar navbar-main navbar-expand-lg navbar-dark navbar-theme-primary py-lg-2 px-lg-6">
             <div className="container">
                 <Link to="/" className="navbar-brand">
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-left">
                         <img className="navbar-brand-dark rotate-logo" src="/img/brand/logo.svg" alt="Logo" width="300" height="86" />
                     </div>
                 </Link>
