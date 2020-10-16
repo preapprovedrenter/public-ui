@@ -64,7 +64,7 @@ const LandingPage = ({ data }) => (
                     <div className="container">
                         <div className="row justify-content-between align-items-center">
                             <div className="col-12 col-lg-6">
-                                <h2 className="h4 font-weight-normal text-muted">Customize Your Rental Application</h2>
+                                <h2 className="h4 font-weight-normal text-muted mt-2">Customize Your Rental Application</h2>
                                 <h1 className="display-1 mb-4">Screen Tenants Instantly</h1>
                                 <p className="lead mb-3 mb-lg-5"><strong>Completely FREE for Brokers & Property Managers.</strong></p>
                                 <Link to="/login" className="btn btn-outline-white animate-up-2 mb-5 mb-lg-0 ml-3">
