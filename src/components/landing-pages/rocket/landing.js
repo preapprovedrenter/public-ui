@@ -78,7 +78,7 @@ const LandingPage = ({ data }) => (
                                             <div className="form-group mb-4">
                                                 <label className="h6 text-dark" htmlFor="account-type">Account Type</label>
                                                 <div className="position-relative">
-                                                    <select className="custom-select" id="account-type" required defaultValue="">
+                                                    <select className="custom-select" id="account-type" required defaultValue="applicant">
                                                         <option value="" disabled hidden>Please choose one</option>
                                                         <option value="agent">I'm a Real Estate Agent</option>
                                                         <option value="manager">I'm a Property Manager</option>
@@ -103,16 +103,16 @@ const LandingPage = ({ data }) => (
                                                         <input type="checkbox" name="tos" ng-model="data.tos" required />&nbsp;
                                                         <span>
                                                             By signing up I agree to&nbsp;
-                                                            <a href="/tos/customers/" className="text-action">
+                                                            <a href="/tos/customers/" className="text-action" target="_blank">
                                                                 customer terms of use
                                                             </a> or&nbsp;
-                                                            <a href="/tos/applicant/" >
+                                                            <a href="/tos/applicant/" target="_blank">
                                                                 user terms of use
                                                             </a> along with the Transunion&nbsp;
-                                                            <a href="/sm/end-user-agreement/" >
+                                                            <a href="/sm/end-user-agreement/" target="_blank">
                                                                 end user agreement
                                                             </a> or&nbsp;
-                                                            <a href="/sm/consumer-agreement/" >
+                                                            <a href="/sm/consumer-agreement/" target="_blank">
                                                                 consumer agreement
                                                             </a>.
                                                         </span>
@@ -134,19 +134,19 @@ const LandingPage = ({ data }) => (
                         <div className="row">
                             <div className="col-12 text-gray text-center">
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <img src="/img/clients/keller-williams-realty.svg" alt="icon" />
+                                    <img src="/img/clients/keller-williams-realty.svg" alt="icon" width="100" height="46" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <img src="/img/clients/coldwell-banker-reliable.svg" alt="icon" />
+                                    <img src="/img/clients/coldwell-banker-reliable.svg" alt="icon" width="100" height="44" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <img src="/img/clients/the-corcoran-group.svg" alt="icon" />
+                                    <img src="/img/clients/the-corcoran-group.svg" alt="icon" width="100" height="28" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <img src="/img/clients/eXp-realty.svg" alt="icon" />
+                                    <img src="/img/clients/eXp-realty.svg" alt="icon" width="100" height="38" />
                                 </div>
                                 <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <img src="/img/clients/halstead.svg" alt="icon" />
+                                    <img src="/img/clients/halstead.svg" alt="icon" width="100" height="26" />
                                 </div>
                             </div>
                         </div>
@@ -241,7 +241,7 @@ const LandingPage = ({ data }) => (
                                 <h2 className="font-weight-bolder mb-4">Customize Your Application</h2>
                                 <p>We understand you may request specific information on your application.</p>
                                 <p>If you don't like our default form you can easily customize your own application using our drag-and-drop form builder.</p>
-                                <a href="/forms/?id=5cc1dc6857fc9b000812cfd7" className="btn btn-primary mt-3 animate-up-2">
+                                <a href="/forms/?id=5cc1dc6857fc9b000812cfd7" className="btn btn-primary mt-3 animate-up-2" target="_blank">
                                     Sample Application Form
                                     <span className="icon icon-xs ml-2">
                                         <i className="fas fa-external-link-alt"></i>
@@ -257,7 +257,7 @@ const LandingPage = ({ data }) => (
                                 <h2 className="font-weight-bolder mb-4">Screen Tenants Instantly</h2>
                                 <p>Our application is able to instantly produce background checks including credit reports, criminal background and landlord tenant history.</p>
                                 <p>Payments are made through our secure online system. This take out the need to collect application fees via cash or check (unless you want to).  Our system also allows landlords, property managers, and brokers to collect processing fees.</p>
-                                <a href="./dashboard/app-analysis.html" className="btn btn-primary mt-3 animate-up-2">
+                                <a href="/samples/sample-reports.pdf" className="btn btn-primary mt-3 animate-up-2" target="_blank">
                                     Sample Report
                                     <span className="icon icon-xs ml-2">
                                         <i className="fas fa-external-link-alt"></i>
@@ -340,7 +340,7 @@ const LandingPage = ({ data }) => (
                                                         Get a full copy of our
                                                         ISO/IEC 27001 Report.
                                                     </p>
-                                                    <a href="/security/bitsight-technologies-iso-27001-report-2020-07-31.pdf" className="btn btn-sm btn-primary">
+                                                    <a href="/security/bitsight-technologies-iso-27001-report-2020-07-31.pdf" className="btn btn-sm btn-primary" target="_blank">
                                                         Learn more
                                                         <i className="fas fa-link ml-1"></i>
                                                     </a>
@@ -363,7 +363,7 @@ const LandingPage = ({ data }) => (
                                                 <div className="pl-4">
                                                     <h5 className="icon-box-title">Learning materials</h5>
                                                     <p className="icon-box-text">The marketing tutorials on our blog and YouTube channel, often feature our tools.</p>
-                                                    <a href="https://blog.preapprovedrenter.com" className="btn btn-sm btn-primary">
+                                                    <a href="https://blog.preapprovedrenter.com" className="btn btn-sm btn-primary" target="_blank">
                                                         Visit Our Blog
                                                         <i className="fas fa-bookmark ml-1"></i>
                                                     </a>
@@ -409,7 +409,7 @@ const LandingPage = ({ data }) => (
                         <div className="row mb-lg-5">
                             <div className="col-12 col-lg-6">
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src={data.usersMoshe.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersMoshe.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="Moshe Kanarfogel" width="48" height="48" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
@@ -423,7 +423,7 @@ const LandingPage = ({ data }) => (
                                     </div>
                                 </div>
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src={data.usersCarnegieHill.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersCarnegieHill.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="Carnegie Hill Properties" width="48" height="48" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
@@ -439,7 +439,7 @@ const LandingPage = ({ data }) => (
                             </div>
                             <div className="col-12 col-lg-6">
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src={data.usersDylan.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersDylan.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="Dylan Pichulik" width="48" height="48" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
@@ -453,7 +453,7 @@ const LandingPage = ({ data }) => (
                                     </div>
                                 </div>
                                 <div className="customer-testimonial d-flex mb-5">
-                                    <img src={data.usersMaria.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" alt="" />
+                                    <img src={data.usersMaria.childImageSharp.fixed.src} className="image image-sm mr-3 rounded-circle shadow" width="48" height="48" alt="Maria Goris" />
                                     <div className="content-wrapper bg-soft shadow-soft border border-light rounded position-relative p-4">
                                         <div className="d-flex mb-4">
                                             <span className="text-warning mr-2"><i className="star fas fa-star"></i></span>
@@ -470,7 +470,7 @@ const LandingPage = ({ data }) => (
                         </div>
                         <div className="row">
                             <div className="col text-center">
-                                <a href="https://www.trustpilot.com/review/preapprovedrenter.com" className="btn btn-primary animate-up-2"><span className="mr-2"><i className="fas fa-book-open"></i></span> See our reviews on Trust Pilot</a>
+                                <a href="https://www.trustpilot.com/review/preapprovedrenter.com" target="_blank" className="btn btn-primary animate-up-2"><span className="mr-2"><i className="fas fa-book-open"></i></span> See our reviews on Trust Pilot</a>
                             </div>
                         </div>
                     </div>
@@ -482,7 +482,7 @@ const LandingPage = ({ data }) => (
                             <div className="col-12 text-center mb-5">
                                 <h2 className="mb-4">Tenant Screening Starts with PreApproved Renter</h2>
                                 <p className="lead mb-5">As featured in the</p>
-                                <img width="300" src="/img/icons/the-new-york-times.svg" alt="The New York Times logo" />
+                                <img width="300" height="47" src="/img/icons/the-new-york-times.svg" alt="The New York Times logo" />
                             </div>
                         </div> 
                     </div>    
@@ -508,23 +508,23 @@ const LandingPage = ({ data }) => (
                         <div className="row">
                             <div className="col-lg-4 mb-4 mb-lg-0">
                                 <a className="footer-brand mr-lg-5 d-flex align-items-center" href="/">
-                                    <img src="/img/brand/logo.svg" alt="Footer logo" />
+                                    <img src="/img/brand/logo.svg" alt="Footer logo" width="300" height="86" />
                                 </a>
                                 <p className="my-4"></p>
                             </div>
                             <div className="col-6 col-sm-6 col-lg-4 mb-4 mb-lg-0">
                                 <ul className="links-vertical">
                                     <li><Link to="/signup">Sign up</Link></li>
-                                    <li><a href="https://blog.preapprovedrenter.com">Blog</a></li>
+                                    <li><a href="https://blog.preapprovedrenter.com" target="_blank">Blog</a></li>
                                     <li><a href="mailto:support@preapprovedrenter.com">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div className="col-6 col-sm-6 col-lg-4 mb-4 mb-lg-0">
                                 <ul className="links-vertical">
-                                    <li><a href="/privacy/">Privacy Policy</a></li>
-                                    <li><a href="/tos/payments/">My Payments Terms and Conditions</a></li>
-                                    <li><a href="/tos/applicant/">User Terms of Use</a></li>
-                                    <li><a href="/tos/customers/">Customer Terms &amp; Conditions</a></li>
+                                    <li><a href="/privacy/" target="_blank">Privacy Policy</a></li>
+                                    <li><a href="/tos/payments/" target="_blank">My Payments Terms and Conditions</a></li>
+                                    <li><a href="/tos/applicant/" target="_blank">User Terms of Use</a></li>
+                                    <li><a href="/tos/customers/" target="_blank">Customer Terms &amp; Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
