@@ -41,6 +41,11 @@ const LoginPage = () => {
                 state.failure = !!response.error;
 
                 if (!state.failure) {
+                    const expires_in = 
+                        (new Date()).getTime() + (response.expires_in * 1000);
+                    document.cookie = `token_expires=${expires_in}; path=/`;
+                    document.cookie = `token=${response.access_token}; path=/`;
+        
                     window.location.href = "/app/";
                 } else {
                     setAuth(state);
