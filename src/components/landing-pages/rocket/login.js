@@ -40,7 +40,11 @@ const LoginPage = () => {
                 const state = {...auth, loading: false};
                 state.failure = !!response.error;
 
-                setAuth(state);
+                if (!state.failure) {
+                    window.location.href = "/app/";
+                } else {
+                    setAuth(state);
+                }
             });
     }
 
