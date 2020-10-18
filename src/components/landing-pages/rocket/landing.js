@@ -173,7 +173,7 @@ const LandingPage = ({ data }) => (
                                 <div className="card border-light p-4">
                                     <div className="card-header pb-0">
                                         <div className="image-md">
-                                            <img src="/img/icons/envelope.svg" alt="icon" />
+                                            <img src="/img/icons/envelope.svg" alt="How to step icon" width="88" height="88" />
                                         </div>
                                         <h2 className="h4 mt-3">You send a link</h2>
                                         <p className="mb-0">
@@ -194,7 +194,7 @@ const LandingPage = ({ data }) => (
                                 <div className="card border-light p-4">
                                     <div className="card-header pb-0">
                                         <div className="image-md">
-                                            <img src="/img/icons/user.svg" alt="icon" />
+                                            <img src="/img/icons/user.svg" alt="How to step icon" width="88" height="88" />
                                         </div>
                                         <h2 className="h4 mt-3">Applicant Applies</h2>
                                         <p className="mb-0">The applicant applies online through any internet connected device. Once they submit their application. We'll email you.
@@ -208,7 +208,7 @@ const LandingPage = ({ data }) => (
                                 <div className="card border-light p-4">
                                     <div className="card-header pb-0">
                                         <div className="image-md">
-                                            <img src="/img/icons/form.svg" alt="icon" />
+                                            <img src="/img/icons/form.svg" alt="How to step icon" width="88" height="88" />
                                         </div>
                                         <h2 className="h4 mt-3">You get the application</h2>
                                         <p className="mb-0">Log on to see their application, paperwork and background checks immediately</p>
@@ -221,7 +221,7 @@ const LandingPage = ({ data }) => (
                                 <div className="card border-light p-4">
                                     <div className="card-header pb-0">
                                         <div className="image-md">
-                                            <img src="/img/icons/deal.svg" alt="icon" />
+                                            <img src="/img/icons/deal.svg" alt="How to step icon" width="88" height="88" />
                                         </div>
                                         <h2 className="h4 mt-3">Generate Leases</h2>
                                         <p className="mb-0">Autogenerate leases with tenants application for e-signature</p>
