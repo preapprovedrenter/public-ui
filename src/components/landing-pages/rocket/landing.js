@@ -10,7 +10,7 @@ const LandingPage = ({ data }) => {
         'preappQS'
     ]);
 
-    if (!!window) {
+    if (typeof window !== 'undefined') {
         setCookie('preappQS=', window.encodeURIComponent(window.location.search))
     }
 
