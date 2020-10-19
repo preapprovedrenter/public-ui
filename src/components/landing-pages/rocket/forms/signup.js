@@ -5,7 +5,7 @@ import { useInput } from '../hooks/input'
 
 const SignupForm = () => {
     const data = useStaticQuery(graphql`
-        query {
+        query siteData {
             site {
                 siteMetadata {
                     apiUrl,
