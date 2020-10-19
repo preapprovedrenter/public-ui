@@ -71,11 +71,11 @@ const SignupForm = () => {
                     method: 'POST',
                     body: formData
                 }).then(response => {
-                    const data = response.json();
+                    const result = response.json();
                     const expires_in = (new Date()).getTime() + 
-                        (data.expires_in * 1000);
+                        (result.expires_in * 1000);
 
-                    setCookie('token', data.access_token, {
+                    setCookie('token', result.access_token, {
                         domain: data.site.siteMetadata.cookieDomain,
                         path: '/'
                     })
