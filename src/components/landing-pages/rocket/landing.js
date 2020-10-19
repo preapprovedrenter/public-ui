@@ -1,10 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 import { StaticQuery, graphql } from "gatsby"
+import { useCookies } from 'react-cookie'
 import Img from "gatsby-image"
+import SignupForm from './forms/signup'
 
-const LandingPage = ({ data }) => (
-    <StaticQuery
+const LandingPage = ({ data }) => {
+    const [cookies, setCookie] = useCookies([
+        'preappQS'
+    ]);
+    setCookie('preappQS=', window.encodeURIComponent(window.location.search))
+
+    return <StaticQuery
         query={graphql`
             query {
                 webapp4: file(relativePath: {glob: "illustrations/webapp4.jpg"}) {
@@ -74,53 +81,7 @@ const LandingPage = ({ data }) => (
                             <div className="col-12 col-lg-5">
                                 <div className="card shadow-sm text-dark p-4">
                                     <div className="card-body p-2">
-                                        <form action="#">
-                                            <div className="form-group mb-4">
-                                                <label className="h6 text-dark" htmlFor="account-type">Account Type</label>
-                                                <div className="position-relative">
-                                                    <select className="custom-select" id="account-type" required defaultValue="applicant">
-                                                        <option value="" disabled hidden>Please choose one</option>
-                                                        <option value="agent">I'm a Real Estate Agent</option>
-                                                        <option value="manager">I'm a Property Manager</option>
-                                                        <option value="landlord">I'm a Landlord</option>
-                                                        <option value="applicant">I'm an Applicant</option>
-                                                        <option value="guarantor">I'm a Guarantor</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-4">
-                                                <label className="h6 text-dark" htmlFor="email">Email Address</label>
-                                                <input id="email" name="contact-email" type="email" className="form-control" placeholder="james@example.com" required />
-                                            </div>
-                                            <div className="form-group mb-4">
-                                                <label className="h6 text-dark" htmlFor="password">Password</label>
-                                                <input id="password" name="password" type="password" className="form-control" placeholder="" required />
-                                            </div>
-
-                                            <div className="form-group mb-4">
-                                                <div className="checkbox signup-checkboxes-white-bg">
-                                                    <label>
-                                                        <input type="checkbox" name="tos" ng-model="data.tos" required />&nbsp;
-                                                        <span>
-                                                            By signing up I agree to&nbsp;
-                                                            <a href="/tos/customers/" className="text-action" target="_blank">
-                                                                customer terms of use
-                                                            </a> or&nbsp;
-                                                            <a href="/tos/applicant/" target="_blank">
-                                                                user terms of use
-                                                            </a> along with the Transunion&nbsp;
-                                                            <a href="/sm/end-user-agreement/" target="_blank">
-                                                                end user agreement
-                                                            </a> or&nbsp;
-                                                            <a href="/sm/consumer-agreement/" target="_blank">
-                                                                consumer agreement
-                                                            </a>.
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <button className="btn btn-primary btn-block btn-loading" type="submit">Sign up</button>
-                                        </form>
+                                        <SignupForm />
                                     </div>
                                 </div>
                             </div>
@@ -540,7 +501,7 @@ const LandingPage = ({ data }) => (
                 </footer>
             </>
         }
-    />
-)
+    />;
+};
 
 export default LandingPage
