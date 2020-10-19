@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { useCookies } from 'react-cookie'
 import Img from "gatsby-image"
 import SignupForm from './forms/signup'
+import './landing.css'
 
 const LandingPage = ({ data }) => {
     const [cookies, setCookie] = useCookies([
@@ -95,6 +96,14 @@ const LandingPage = ({ data }) => {
 
                 <div className="clients section section-sm py-5">
                     <div className="container">
+                        <div className="row">
+                            <div className="col-12 text-gray text-center">
+                                <p className="lead">
+                                    Our Users Include Agents At
+                                </p>
+                            </div>
+                        </div>
+
                         <div className="row">
                             <div className="col-12 text-gray text-center">
                                 <div className="icon icon-xl mr-2 mr-sm-5">
@@ -435,6 +444,49 @@ const LandingPage = ({ data }) => {
                         <div className="row">
                             <div className="col text-center">
                                 <a href="https://www.trustpilot.com/review/preapprovedrenter.com" target="_blank" className="btn btn-primary animate-up-2"><span className="mr-2"><i className="fas fa-book-open"></i></span> See our reviews on Trust Pilot</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="section">
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <div className="col-12 col-md-8 text-center">
+                                <h1 className="h1 mb-4">How much does PreApproved Renter Cost?</h1>
+                                <p className="lead" style={{fontSize: "4em"}}>
+                                    <span style={{fontSize: ".4em", verticalAlign: "middle"}}>$</span>0</p>
+                            </div>
+                        </div>
+                        <div className="row justify-content-center mb-5 mb-lg-7">
+                            <div className="col-12 col-md-8 text-center">
+                                <p className="lead">PreApproved Renter is FREE for Real Estate Professionals – You select the
+reports you want, and your applicants pay for the cost of the reports.</p>
+                                <p className="mt-2 lead">Report Prices paid by Tenants:</p>
+                                <div className="row justify-content-center">
+                                    <div className="col-12 col-md-9 text-center">
+                                        <ul className="list-group pricing-box">
+                                            <li className="list-group-item d-block text-left">
+                                                Credit
+                                                <div className="float-right">
+                                                    <span class="price">$19.95</span> <span class="small">/ report</span>
+                                                </div>
+                                            </li>
+                                            <li className="list-group-item d-block text-left">
+                                                Criminal
+                                                <div className="float-right">
+                                                    <span class="price">$10.00</span> <span class="small">/ report</span>
+                                                </div>
+                                            </li>
+                                            <li className="list-group-item d-block text-left">
+                                                Eviction
+                                                <div className="float-right">
+                                                    <span class="price">$10.00</span> <span class="small">/ report</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

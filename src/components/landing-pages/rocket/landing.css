@@ -1,0 +1,11 @@
+.pricing-box li {
+    font-size: 1.5em;
+}
+
+.pricing-box li .small {
+    font-size: .6em;
+}
+
+.pricing-box li .price {
+    font-weight: bold;
+}
