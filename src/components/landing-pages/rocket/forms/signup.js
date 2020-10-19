@@ -22,7 +22,8 @@ const SignupForm = () => {
     const password = useInput('');
     const [signup, setSignup] = useState({
         processing: false,
-        failure: false
+        failure: false,
+        issues: null
     });
 
     const onSubmit = (e) => {
@@ -57,8 +58,11 @@ const SignupForm = () => {
         })
         .then(response => {
             if (response.status === 422 || response.status >= 500) {
-                const state = {...signup, processing: false, failure: true};
-                setSignup(state);
+                response.json().then(response => {
+                    const issues = response._issues || null;
+                    const state = {...signup, processing: false, failure: true, issues};
+                    setSignup(state);
+                    })
             } else {
                 const formData = new FormData();
 
@@ -96,7 +100,7 @@ const SignupForm = () => {
             {signup.failure ? <div className="row justify-content-center mb-2">
                 <div className="col-12 d-flex align-items-center justify-content-center">
                     <div className="alert alert-danger w-100 fmxw-500" role="alert">
-                        There was an error processing your request, please double check your username and account type and try again.
+                        There was an error processing your request, please double check the fields below and try again.
                     </div>
                 </div>
             </div> : null}
@@ -122,16 +126,28 @@ const SignupForm = () => {
                         Email Address
                     </label>
                     <input id="email" name="contact-email" type="email"
-                        className="form-control" placeholder="james@example.com"
-                        required {...username.bind} />
+                        className={`form-control ${(signup.issues && signup.issues.username) ? 'is-invalid' : ''}`}
+                        placeholder="james@example.com" required {...username.bind} />
+                    {signup.issues && signup.issues.username ? 
+                        <div className="invalid-feedback">
+                            This username is invalid or has already been taken
+                        </div> : null
+                    }
                 </div>
                 <div className="form-group mb-4">
                     <label className="h6 text-dark" htmlFor="password">
                         Password
                     </label>
                     <input id="password" name="password" type="password"
-                        className="form-control" placeholder="" required
-                        {...password.bind} />
+                        className={`form-control ${(signup.issues && signup.issues.password) ? 'is-invalid' : ''}`}
+                        placeholder="" required {...password.bind} />
+                    {signup.issues && signup.issues.password ? 
+                        <div className="invalid-feedback">
+                            Password must meet the following requirements:&nbsp;
+                            at least one number, at least one lower case letter,&nbsp;
+                            at least one capital letter.
+                        </div> : null
+                    }
                 </div>
 
                 <div className="form-group mb-4">
