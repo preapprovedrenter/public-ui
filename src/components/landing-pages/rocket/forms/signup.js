@@ -75,21 +75,22 @@ const SignupForm = () => {
                     method: 'POST',
                     body: formData
                 }).then(response => {
-                    const result = response.json();
-                    const expires_in = (new Date()).getTime() + 
-                        (result.expires_in * 1000);
+                    response.json().then(result => {
+                        const expires_in = (new Date()).getTime() +
+                            (result.expires_in * 1000);
 
-                    setCookie('token', result.access_token, {
-                        domain: data.site.siteMetadata.cookieDomain,
-                        path: '/'
-                    })
+                        setCookie('token', result.access_token, {
+                            domain: data.site.siteMetadata.cookieDomain,
+                            path: '/'
+                        })
 
-                    setCookie('token_expires', expires_in, {
-                        domain: data.site.siteMetadata.cookieDomain,
-                        path: '/'
-                    })
+                        setCookie('token_expires', expires_in, {
+                            domain: data.site.siteMetadata.cookieDomain,
+                            path: '/'
+                        })
 
-                    window.location.href = "/app/?welcome";
+                        window.location.href = "/app/?welcome";
+                    });
                 });
             }
         });
