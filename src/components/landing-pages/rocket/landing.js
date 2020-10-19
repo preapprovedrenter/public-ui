@@ -9,7 +9,10 @@ const LandingPage = ({ data }) => {
     const [cookies, setCookie] = useCookies([
         'preappQS'
     ]);
-    setCookie('preappQS=', window.encodeURIComponent(window.location.search))
+
+    if (!!window) {
+        setCookie('preappQS=', window.encodeURIComponent(window.location.search))
+    }
 
     return <StaticQuery
         query={graphql`
