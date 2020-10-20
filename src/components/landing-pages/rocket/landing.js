@@ -41,28 +41,28 @@ const LandingPage = ({ data }) => {
                 },
                 usersMoshe: file(relativePath: {glob: "users/moshe-kanarfogel.jpg"}) {
                     childImageSharp {
-                        fixed(width: 48, height: 48) {
+                        fixed(width: 96, height: 96) {
                             src
                         }
                     }
                 },
                 usersCarnegieHill: file(relativePath: {glob: "users/carnegie-hill-properties.jpg"}) {
                     childImageSharp {
-                        fixed(width: 48, height: 48) {
+                        fixed(width: 96, height: 96) {
                             src
                         }
                     }
                 },
                 usersDylan: file(relativePath: {glob: "users/dylan-pichulik.jpg"}) {
                     childImageSharp {
-                        fixed(width: 48, height: 48) {
+                        fixed(width: 96, height: 96) {
                             src
                         }
                     }
                 },
                 usersMaria: file(relativePath: {glob: "users/maria-goris.jpg"}) {
                     childImageSharp {
-                        fixed(width: 48, height: 48) {
+                        fixed(width: 96, height: 96) {
                             src
                         }
                     }
