@@ -313,7 +313,7 @@ const LandingPage = ({ data }) => {
                                                         Get a full copy of our
                                                         ISO/IEC 27001 Report.
                                                     </p>
-                                                    <a href="/security/bitsight-technologies-iso-27001-report-2020-07-31.pdf" className="btn btn-sm btn-primary" target="_blank">
+                                                    <a href="/security/bitsight-technologies-iso-27001-report-2020-07-31.pdf" className="btn btn-sm btn-primary" target="_blank" alt="ISO 27001 Security Report">
                                                         Learn more
                                                         <i className="fas fa-link ml-1"></i>
                                                     </a>
