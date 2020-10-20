@@ -314,7 +314,7 @@ const LandingPage = ({ data }) => {
                                                         ISO/IEC 27001 Report.
                                                     </p>
                                                     <a href="/security/bitsight-technologies-iso-27001-report-2020-07-31.pdf" className="btn btn-sm btn-primary" target="_blank" alt="ISO 27001 Security Report" rel="noreferrer">
-                                                        Learn more
+                                                        Security Report
                                                         <i className="fas fa-link ml-1"></i>
                                                     </a>
                                                 </div>
@@ -449,7 +449,7 @@ const LandingPage = ({ data }) => {
                     </div>
                 </section>
 
-                <section className="section">
+                <section className="section bg-soft">
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-12 col-md-8 text-center">
@@ -458,7 +458,7 @@ const LandingPage = ({ data }) => {
                                     <span style={{fontSize: ".4em", verticalAlign: "middle"}}>$</span>0</p>
                             </div>
                         </div>
-                        <div className="row justify-content-center mb-5 mb-lg-7">
+                        <div className="row justify-content-center">
                             <div className="col-12 col-md-8 text-center">
                                 <p className="lead">PreApproved Renter is FREE for Real Estate Professionals – You select the
 reports you want, and your applicants pay for the cost of the reports.</p>
@@ -492,7 +492,7 @@ reports you want, and your applicants pay for the cost of the reports.</p>
                     </div>
                 </section>
 
-                <section className="section section-lg pb-5 bg-soft">
+                <section className="section section-lg pb-5">
                     <div className="container">
                         <div className="row"> 
                             <div className="col-12 text-center mb-5">
@@ -505,7 +505,7 @@ reports you want, and your applicants pay for the cost of the reports.</p>
                 </section>
 
                 <footer className="footer section pt-6 pt-md-8 pt-lg-10 pb-3 bg-primary text-white overflow-hidden">
-                    <div className="pattern top pattern-soft"></div>
+                    <div className="pattern top"></div>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 mb-6 text-center" style={{fontSize: "2em"}}>
