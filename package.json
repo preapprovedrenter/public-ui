@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@sentry/gatsby": "^5.26.0",
     "bootstrap": "^4.5.3",
     "gatsby": "^2.24.77",
     "gatsby-image": "^2.4.21",
