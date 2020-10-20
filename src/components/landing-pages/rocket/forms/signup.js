@@ -28,7 +28,6 @@ const SignupForm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        throw Error("test");
 
         const state = {...signup, processing: true, failure: false};
         setSignup(state);
