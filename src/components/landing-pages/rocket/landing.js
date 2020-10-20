@@ -7,7 +7,7 @@ import SignupForm from './forms/signup'
 import './landing.css'
 
 const LandingPage = ({ data }) => {
-    const [cookies, setCookie] = useCookies([
+    const [cookies, setCookie] = useCookies([ // eslint-disable-line no-unused-vars
         'preappQS'
     ]);
 
@@ -214,7 +214,7 @@ const LandingPage = ({ data }) => {
                                 <h2 className="font-weight-bolder mb-4">Customize Your Application</h2>
                                 <p>We understand you may request specific information on your application.</p>
                                 <p>If you don't like our default form you can easily customize your own application using our drag-and-drop form builder.</p>
-                                <a href="/forms/?id=5cc1dc6857fc9b000812cfd7" className="btn btn-primary mt-3 animate-up-2" target="_blank">
+                                <a href="/forms/?id=5cc1dc6857fc9b000812cfd7" className="btn btn-primary mt-3 animate-up-2" target="_blank" rel="noreferrer">
                                     Sample Application Form
                                     <span className="icon icon-xs ml-2">
                                         <i className="fas fa-external-link-alt"></i>
@@ -230,7 +230,7 @@ const LandingPage = ({ data }) => {
                                 <h2 className="font-weight-bolder mb-4">Screen Tenants Instantly</h2>
                                 <p>Our application is able to instantly produce background checks including credit reports, criminal background and landlord tenant history.</p>
                                 <p>Payments are made through our secure online system. This take out the need to collect application fees via cash or check (unless you want to).  Our system also allows landlords, property managers, and brokers to collect processing fees.</p>
-                                <a href="/samples/sample-reports.pdf" className="btn btn-primary mt-3 animate-up-2" target="_blank">
+                                <a href="/samples/sample-reports.pdf" className="btn btn-primary mt-3 animate-up-2" target="_blank" rel="noreferrer">
                                     Sample Report
                                     <span className="icon icon-xs ml-2">
                                         <i className="fas fa-external-link-alt"></i>
@@ -313,7 +313,7 @@ const LandingPage = ({ data }) => {
                                                         Get a full copy of our
                                                         ISO/IEC 27001 Report.
                                                     </p>
-                                                    <a href="/security/bitsight-technologies-iso-27001-report-2020-07-31.pdf" className="btn btn-sm btn-primary" target="_blank" alt="ISO 27001 Security Report">
+                                                    <a href="/security/bitsight-technologies-iso-27001-report-2020-07-31.pdf" className="btn btn-sm btn-primary" target="_blank" alt="ISO 27001 Security Report" rel="noreferrer">
                                                         Learn more
                                                         <i className="fas fa-link ml-1"></i>
                                                     </a>
@@ -336,7 +336,7 @@ const LandingPage = ({ data }) => {
                                                 <div className="pl-4">
                                                     <h5 className="icon-box-title">Learning materials</h5>
                                                     <p className="icon-box-text">The marketing tutorials on our blog and YouTube channel, often feature our tools.</p>
-                                                    <a href="https://blog.preapprovedrenter.com" className="btn btn-sm btn-primary" target="_blank">
+                                                    <a href="https://blog.preapprovedrenter.com" className="btn btn-sm btn-primary" target="_blank"  rel="noreferrer">
                                                         Visit Our Blog
                                                         <i className="fas fa-bookmark ml-1"></i>
                                                     </a>
@@ -443,7 +443,7 @@ const LandingPage = ({ data }) => {
                         </div>
                         <div className="row">
                             <div className="col text-center">
-                                <a href="https://www.trustpilot.com/review/preapprovedrenter.com" target="_blank" className="btn btn-primary animate-up-2"><span className="mr-2"><i className="fas fa-book-open"></i></span> See our reviews on Trust Pilot</a>
+                                <a href="https://www.trustpilot.com/review/preapprovedrenter.com" target="_blank" rel="noreferrer" className="btn btn-primary animate-up-2"><span className="mr-2"><i className="fas fa-book-open"></i></span> See our reviews on Trust Pilot</a>
                             </div>
                         </div>
                     </div>
@@ -531,16 +531,16 @@ reports you want, and your applicants pay for the cost of the reports.</p>
                             <div className="col-6 col-sm-6 col-lg-4 mb-4 mb-lg-0">
                                 <ul className="links-vertical">
                                     <li><Link to="/signup">Sign up</Link></li>
-                                    <li><a href="https://blog.preapprovedrenter.com" target="_blank">Blog</a></li>
-                                    <li><a href="mailto:support@preapprovedrenter.com">Contact Us</a></li>
+                                    <li><a href="https://blog.preapprovedrenter.com" target="_blank" rel="noreferrer">Blog</a></li>
+                                    <li><a href="mailto:support@preapprovedrenter.com" rel="noreferrer">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div className="col-6 col-sm-6 col-lg-4 mb-4 mb-lg-0">
                                 <ul className="links-vertical">
-                                    <li><a href="/privacy/" target="_blank">Privacy Policy</a></li>
-                                    <li><a href="/tos/payments/" target="_blank">My Payments Terms and Conditions</a></li>
-                                    <li><a href="/tos/applicant/" target="_blank">User Terms of Use</a></li>
-                                    <li><a href="/tos/customers/" target="_blank">Customer Terms &amp; Conditions</a></li>
+                                    <li><a href="/privacy/" target="_blank" rel="noreferrer">Privacy Policy</a></li>
+                                    <li><a href="/tos/payments/" target="_blank" rel="noreferrer">My Payments Terms and Conditions</a></li>
+                                    <li><a href="/tos/applicant/" target="_blank" rel="noreferrer">User Terms of Use</a></li>
+                                    <li><a href="/tos/customers/" target="_blank" rel="noreferrer">Customer Terms &amp; Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
