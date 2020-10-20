@@ -17,7 +17,7 @@ const SignupForm = () => {
     const [cookies, setCookie] = useCookies([
         'preappQS', 'token', 'token_expires'
     ]);
-    const userType = useInput('applicant');
+    const userType = useInput('');
     const username= useInput('');
     const password = useInput('');
     const [signup, setSignup] = useState({
