@@ -75,7 +75,7 @@ const LandingPage = ({ data }) => {
                     <div className="container">
                         <div className="row justify-content-between align-items-center">
                             <div className="col-12 col-lg-6">
-                                <h2 className="h4 font-weight-normal text-muted mt-2">Customize Your Rental Application</h2>
+                                <p className="h4 font-weight-normal text-muted mt-2">Customize Your Rental Application</p>
                                 <h1 className="display-1 mb-4">Screen Tenants Instantly</h1>
                                 <p className="lead mb-3 mb-lg-5"><strong>Completely FREE for Brokers & Property Managers.</strong></p>
                                 <Link to="/login" className="btn btn-outline-white animate-up-2 mb-5 mb-lg-0 ml-3">
@@ -170,8 +170,7 @@ const LandingPage = ({ data }) => {
                                             <img src="/img/icons/user.svg" alt="How to step icon" width="88" height="88" />
                                         </div>
                                         <h2 className="h4 mt-3">Applicant Applies</h2>
-                                        <p className="mb-0">The applicant applies online through any internet connected device. Once they submit their application. We'll email you.
-        </p>
+                                        <p className="mb-0">The applicant applies online through any internet connected device. Once they submit their application. We'll email you.</p>
                                     </div>
                                     <div className="card-body">
                                     </div>
@@ -279,7 +278,7 @@ const LandingPage = ({ data }) => {
                                                     </div>
                                                 </div>
                                                 <div className="pl-4">
-                                                    <h5 className="mb-3">Custom Support 7 Days a Week</h5>
+                                                    <h3 className="h5 mb-3">Custom Support 7 Days a Week</h3>
                                                     <p className="icon-box-text">Have a question, concern or feedback for us? Our support team is a quick chat or email away.</p>
                                                     <a href="mailto:support@preapprovedrenter.com" className="btn btn-sm btn-primary">
                                                         Email Us
@@ -302,9 +301,9 @@ const LandingPage = ({ data }) => {
                                                     </div>
                                                 </div>
                                                 <div className="pl-4">
-                                                    <h5 className="icon-box-title">
+                                                    <h3 className="h5 icon-box-title">
                                                         Highest Industry Standard for Security
-                                                    </h5>
+                                                    </h3>
                                                     <p className="icon-box-text">
                                                         PreApprovedRenter uses
                                                         the industries highest
@@ -334,7 +333,7 @@ const LandingPage = ({ data }) => {
                                                     </div>
                                                 </div>
                                                 <div className="pl-4">
-                                                    <h5 className="icon-box-title">Learning materials</h5>
+                                                    <h3 className="h5 icon-box-title">Learning materials</h3>
                                                     <p className="icon-box-text">The marketing tutorials on our blog and YouTube channel, often feature our tools.</p>
                                                     <a href="https://blog.preapprovedrenter.com" className="btn btn-sm btn-primary" target="_blank"  rel="noreferrer">
                                                         Visit Our Blog
@@ -357,7 +356,7 @@ const LandingPage = ({ data }) => {
                                                     </div>
                                                 </div>
                                                 <div className="pl-4">
-                                                    <h5 className="icon-box-title">Features released regularly</h5>
+                                                    <h3 className="h5 icon-box-title">Features released regularly</h3>
                                                     <p className="icon-box-text">We frequently update existing tools and release new features — many of which are heavily influenced by requests from our customers.</p>
                                                 </div>
                                             </div>
@@ -375,7 +374,7 @@ const LandingPage = ({ data }) => {
                     <div className="container">
                         <div className="row justify-content-center mb-5 mb-lg-7">
                             <div className="col-12 col-md-8 text-center">
-                                <h1 className="h1 mb-4">Recommended by leading experts in Real Estate</h1>
+                                <h2 className="h1 mb-4">Recommended by leading experts in Real Estate</h2>
                                 <p className="lead">Our products are loved by Real Estate professionals across the US</p>
                             </div>
                         </div>
@@ -453,7 +452,7 @@ const LandingPage = ({ data }) => {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-12 col-md-8 text-center">
-                                <h1 className="h1 mb-4">How much does PreApproved Renter Cost?</h1>
+                                <h2 className="h1 mb-4">How much does PreApproved Renter Cost?</h2>
                                 <p className="lead" style={{fontSize: "4em"}}>
                                     <span style={{fontSize: ".4em", verticalAlign: "middle"}}>$</span>0</p>
                             </div>
@@ -469,19 +468,19 @@ reports you want, and your applicants pay for the cost of the reports.</p>
                                             <li className="list-group-item d-block text-left">
                                                 Credit
                                                 <div className="float-right">
-                                                    <span class="price">$19.95</span> <span class="small">/ report</span>
+                                                    <span className="price">$19.95</span> <span className="small">/ report</span>
                                                 </div>
                                             </li>
                                             <li className="list-group-item d-block text-left">
                                                 Criminal
                                                 <div className="float-right">
-                                                    <span class="price">$10.00</span> <span class="small">/ report</span>
+                                                    <span className="price">$10.00</span> <span className="small">/ report</span>
                                                 </div>
                                             </li>
                                             <li className="list-group-item d-block text-left">
                                                 Eviction
                                                 <div className="float-right">
-                                                    <span class="price">$10.00</span> <span class="small">/ report</span>
+                                                    <span className="price">$10.00</span> <span className="small">/ report</span>
                                                 </div>
                                             </li>
                                         </ul>
@@ -511,7 +510,7 @@ reports you want, and your applicants pay for the cost of the reports.</p>
                             <div className="col-lg-12 mb-6 text-center" style={{fontSize: "2em"}}>
                                 Try it! It's Completely FREE for brokers, landlords & property managers...
                                 <div className="mt-4">
-                                    <Link to="/signup" className="btn btn-secondary btn-pricing-plan animate-up-2 mr-3">
+                                    <Link to="/signup" className="btn bg-white btn-pricing-plan animate-up-2 mr-3">
                                         SIGN UP
                                     </Link>
                                     <Link to="/login" className="btn btn-outline-white animate-up-2">
