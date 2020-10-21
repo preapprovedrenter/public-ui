@@ -71,7 +71,7 @@ const LandingPage = ({ data }) => {
         `}
         render={data =>
             <>
-                <section className="section-header pb-7 pb-lg-11 bg-primary text-white">
+                <section className="section-header pb-7 pb-lg-8 bg-primary text-white">
                     <div className="container">
                         <div className="row justify-content-between align-items-center">
                             <div className="col-12 col-lg-6">
@@ -94,11 +94,11 @@ const LandingPage = ({ data }) => {
                     <div className="pattern bottom"></div>
                 </section>
 
-                <div className="clients section section-sm py-5">
+                <div className="clients section section-sm pb-2 pt-0">
                     <div className="container">
                         <div className="row">
                             <div className="col-12 text-gray text-center">
-                                <p className="lead">
+                                <p className="mb-0">
                                     Our Users Include Agents At
                                 </p>
                             </div>
@@ -106,21 +106,22 @@ const LandingPage = ({ data }) => {
 
                         <div className="row">
                             <div className="col-12 text-gray text-center">
-                                <div className="icon icon-xl mr-2 mr-sm-5">
+                                <div className="icon icon-xl mr-3 mr-sm-5">
                                     <img src="/img/clients/keller-williams-realty.svg" alt="icon" width="100" height="46" />
                                 </div>
-                                <div className="icon icon-xl mr-2 mr-sm-5">
+                                <div className="icon icon-xl mr-3 mr-sm-5">
                                     <img src="/img/clients/coldwell-banker-reliable.svg" alt="icon" width="100" height="44" />
                                 </div>
-                                <div className="icon icon-xl mr-2 mr-sm-5">
-                                    <img src="/img/clients/the-corcoran-group.svg" alt="icon" width="100" height="28" />
-                                </div>
-                                <div className="icon icon-xl mr-2 mr-sm-5">
+                                <div className="icon icon-xl mr-3 mr-sm-5">
                                     <img src="/img/clients/eXp-realty.svg" alt="icon" width="100" height="38" />
                                 </div>
-                                <div className="icon icon-xl mr-2 mr-sm-5">
+                                <div className="icon icon-xl mr-3 mr-sm-5">
                                     <img src="/img/clients/halstead.svg" alt="icon" width="100" height="26" />
                                 </div>
+                                <div className="icon icon-xl mr-3 mr-sm-5">
+                                    <img src="/img/clients/the-corcoran-group.svg" alt="icon" width="100" height="28" />
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -128,7 +129,7 @@ const LandingPage = ({ data }) => {
 
                 <section className="section section-lg pt-6">
                     <div className="container">
-                        <div className="row justify-content-center mb-5 mb-lg-6">
+                        <div className="row justify-content-center mb-4 mb-lg-4">
                             <div className="col-12 col-md-8 text-center">
                                 <h2 className="h1 font-weight-bolder mb-4">Who is PreApproved Renter for?</h2>
                                 <p className="lead">
@@ -136,7 +137,7 @@ const LandingPage = ({ data }) => {
                                     Professionals looking for an easy to use
                                     rental application form that can run
                                     credit and background checks.
-                                    <br/>
+                                    <br/><br/>
                                     Here’s how it works:
                                 </p>
                             </div>
@@ -333,7 +334,7 @@ const LandingPage = ({ data }) => {
                                                     </div>
                                                 </div>
                                                 <div className="pl-4">
-                                                    <h3 className="h5 icon-box-title">Learning materials</h3>
+                                                    <h3 className="h5 icon-box-title">Learning Materials</h3>
                                                     <p className="icon-box-text">The marketing tutorials on our blog and YouTube channel, often feature our tools.</p>
                                                     <a href="https://blog.preapprovedrenter.com" className="btn btn-sm btn-primary" target="_blank"  rel="noreferrer">
                                                         Visit Our Blog
@@ -356,7 +357,7 @@ const LandingPage = ({ data }) => {
                                                     </div>
                                                 </div>
                                                 <div className="pl-4">
-                                                    <h3 className="h5 icon-box-title">Features released regularly</h3>
+                                                    <h3 className="h5 icon-box-title">Features Released Regularly</h3>
                                                     <p className="icon-box-text">We frequently update existing tools and release new features — many of which are heavily influenced by requests from our customers.</p>
                                                 </div>
                                             </div>
