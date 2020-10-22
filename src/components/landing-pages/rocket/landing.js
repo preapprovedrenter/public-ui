@@ -12,7 +12,7 @@ const LandingPage = ({ data }) => {
     ]);
 
     if (typeof window !== 'undefined') {
-        setCookie('preappQS=', window.encodeURIComponent(window.location.search))
+        setCookie('preappQS', window.encodeURIComponent(window.location.search))
     }
 
     return <StaticQuery
