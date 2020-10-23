@@ -97,7 +97,7 @@ const LoginPage = () => {
                                                 <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                                 <label className="form-check-label form-check-sign-white" htmlFor="exampleCheck1">Remember me</label>
                                             </div>
-                                            <div><a href="./forgot-password.html" className="small text-right">Lost password?</a></div>
+                                            <div><a href="/passwords/forgot/" className="small text-right">Lost password?</a></div>
                                         </div>
                                     </div>
                                     <div className="mt-3">
