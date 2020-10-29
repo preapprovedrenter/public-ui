@@ -134,7 +134,7 @@ const SignupForm = () => {
                         placement="bottom">
                         <Popover id="popover-contained">
                             <Popover.Title as="h3">
-                                Are you a tentant?
+                                <i className="text-warning fas fa-exclamation-triangle"></i> Are you a tentant?
                                 <button type="button" className="close" aria-label="Close"
                                     onClick={onConfirmApplicantUserType}>
                                     <span aria-hidden="true">&times;</span>
