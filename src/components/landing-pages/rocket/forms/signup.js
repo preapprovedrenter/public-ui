@@ -1,4 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
+import Overlay from "react-bootstrap/Overlay";
+import Popover from "react-bootstrap/Popover";
 import { useStaticQuery, graphql } from "gatsby"
 import { useCookies } from 'react-cookie';
 import { useInput } from '../hooks/input'
@@ -17,14 +19,26 @@ const SignupForm = () => {
     const [cookies, setCookie] = useCookies([
         'preappQS', 'token', 'token_expires'
     ]);
-    const userType = useInput('');
-    const username= useInput('');
+    const username = useInput('');
     const password = useInput('');
+    const userTypeRef = useRef(null);
     const [signup, setSignup] = useState({
         processing: false,
         failure: false,
-        issues: null
+        issues: null,
+        disabled: false,
+        userTypeConfirmed: false,
     });
+
+    const onUserTypeChanged = userType => {
+        if (!signup.userTypeConfirmed &&
+            (userType === "applicant" || userType === "guarantor")) {
+            const state = {...signup, disabled: true};
+            setSignup(state);
+        }
+    };
+
+    const userType = useInput('', onUserTypeChanged);
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -96,8 +110,13 @@ const SignupForm = () => {
         });
     }
 
+    const onConfirmApplicantUserType = () => {
+        const state = {...signup, disabled: false, userTypeConfirmed: true};
+        setSignup(state);
+    }
+
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className={signup.disabled ? "disabled": ""}>
             {signup.failure ? <div className="row justify-content-center mb-2">
                 <div className="col-12 d-flex align-items-center justify-content-center">
                     <div className="alert alert-danger w-100 fmxw-500" role="alert">
@@ -110,14 +129,40 @@ const SignupForm = () => {
                     <label className="h6 text-dark" htmlFor="account-type">
                         Account Type
                     </label>
+                    <Overlay target={userTypeRef.current}
+                        show={signup.disabled && !signup.userTypeConfirmed}
+                        placement="bottom">
+                        <Popover id="popover-contained">
+                            <Popover.Title as="h3">
+                                Are you a tentant?
+                                <button type="button" className="close" aria-label="Close"
+                                    onClick={onConfirmApplicantUserType}>
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </Popover.Title>
+                            <Popover.Content>
+                                <div className="text-justify">
+                                If you are trying to apply on an apartment please reach
+                                out to the Landlord, Property Manager or Real Estate Agent
+                                for a copy of their rental application vs. signing up here.
+                                <br/>
+                                <br/>
+                                If you are trying to sign up as a Real Estate Professional
+                                please select Landlord, Real Estate Agent or Property
+                                Manager from the dropdown list.
+                                </div>
+                            </Popover.Content>
+                        </Popover>
+                    </Overlay>
+
                     <div className="position-relative">
-                        <select className="custom-select" id="account-type"
+                        <select ref={userTypeRef} className="custom-select" id="account-type"
                             required {...userType.bind}>
                             <option value="" disabled hidden>Please choose one</option>
                             <option value="agent">I'm a Real Estate Agent</option>
                             <option value="manager">I'm a Property Manager</option>
                             <option value="landlord">I'm a Landlord</option>
-                            <option value="applicant">I'm an Applicant</option>
+                            <option value="applicant">I'm an Applicant / Tenant</option>
                             <option value="guarantor">I'm a Guarantor</option>
                         </select>
                     </div>

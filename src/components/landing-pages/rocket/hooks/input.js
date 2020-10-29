@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useInput = initialValue => {
+export const useInput = (initialValue, onChangeCallback) => {
   const [value, setValue] = useState(initialValue);
 
   return {
@@ -11,6 +11,9 @@ export const useInput = initialValue => {
       value,
       onChange: event => {
         setValue(event.target.value);
+        if (onChangeCallback) {
+          onChangeCallback(event.target.value);
+        }
       }
     }
   };
