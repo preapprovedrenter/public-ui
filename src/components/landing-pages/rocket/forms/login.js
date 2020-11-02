@@ -45,7 +45,7 @@ const LoginForm = (props) => {
                     const expires_in = 
                         (new Date()).getTime() + (response.expires_in * 1000);
                     document.cookie = `token_expires=${expires_in}; path=/; domain=${data.site.siteMetadata.cookieDomain}`;
-                    document.cookie = `token=${response.access_token}; path=/`;
+                    document.cookie = `token=${response.access_token}; path=/; domain=${data.site.siteMetadata.cookieDomain}`;
         
                     if (props.onLogin) {
                         props.onLogin();
