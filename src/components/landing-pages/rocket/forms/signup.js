@@ -134,7 +134,7 @@ const SignupForm = () => {
                         placement="bottom">
                         <Popover id="popover-contained">
                             <Popover.Title as="h3">
-                                <i className="text-warning fas fa-exclamation-triangle"></i> Are you a tentant?
+                                <i className="text-warning fas fa-exclamation-triangle"></i>&nbsp; Are you a Tenant?
                                 <button type="button" className="close" aria-label="Close"
                                     onClick={onConfirmApplicantUserType}>
                                     <span aria-hidden="true">&times;</span>
@@ -142,14 +142,14 @@ const SignupForm = () => {
                             </Popover.Title>
                             <Popover.Content>
                                 <div className="text-justify">
-                                If you are trying to apply on an apartment please reach
-                                out to the Landlord, Property Manager or Real Estate Agent
-                                for a copy of their rental application vs. signing up here.
-                                <br/>
-                                <br/>
-                                If you are trying to sign up as a Real Estate Professional
-                                please select Landlord, Real Estate Agent or Property
-                                Manager from the dropdown list.
+                                    If you are trying to apply on an apartment please reach
+                                    out to the Landlord, Property Manager or Real Estate Agent
+                                    for a copy of their rental application vs. signing up here.
+                                    <br/>
+                                    <br/>
+                                    If you are trying to sign up as a Real Estate Professional
+                                    to screen tenants please select Landlord, Real Estate Agent
+                                    or Property Manager from the dropdown list.
                                 </div>
                             </Popover.Content>
                         </Popover>
