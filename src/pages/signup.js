@@ -14,7 +14,7 @@ const Page = () => (
                 <div className="row justify-content-center">
                     <div className="col-3 d-none d-xl-flex d-lg-flex align-items-center justify-content-center">
                         <div className="form-bg-image"
-                            dataBackground="/img/illustrations/signup-agent.svg"
+                            databackground="/img/illustrations/signup-agent.svg"
                             style={{
                                 backgroundImage: 'url("/img/illustrations/signup-agent.svg")',
                                 width: "235px",
@@ -32,7 +32,7 @@ const Page = () => (
                     </div>
                     <div className="col-4 d-none d-xl-flex d-lg-flex align-items-center justify-content-center">
                         <div className="form-bg-image"
-                            dataBackground="/img/illustrations/signup-tenant.svg"
+                            databackground="/img/illustrations/signup-tenant.svg"
                             style={{
                                 backgroundImage: 'url("/img/illustrations/signup-tenant.svg")',
                                 width: "350px",
