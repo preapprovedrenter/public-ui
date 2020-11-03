@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useInput } from '../hooks/input'
+import { useCookies } from 'react-cookie';
 
 const LoginForm = (props) => {
     const data = useStaticQuery(graphql`
@@ -20,9 +21,29 @@ const LoginForm = (props) => {
         failure: false,
         isAuthenticated: false
     });
+    const [cookies, setCookie, removeCookie] = useCookies([
+        'token', 'token_expires'
+    ]);
 
     const onSubmit = (e) => {
         e.preventDefault();
+
+        removeCookie('token', {
+            domain: data.site.siteMetadata.cookieDomain,
+            path: '/'
+        })
+        removeCookie('token_expires', {
+            domain: data.site.siteMetadata.cookieDomain,
+            path: '/'
+        })
+        removeCookie('token', {
+            domain: 'preapprovedrenter.com',
+            path: '/'
+        })
+        removeCookie('token_expires', {
+            domain: 'preapprovedrenter.com',
+            path: '/'
+        })
 
         const state = {...auth, loading: true, failure: false};
         setAuth(state);
@@ -44,8 +65,16 @@ const LoginForm = (props) => {
                 if (!state.failure) {
                     const expires_in = 
                         (new Date()).getTime() + (response.expires_in * 1000);
-                    document.cookie = `token_expires=${expires_in}; path=/; domain=${data.site.siteMetadata.cookieDomain}`;
-                    document.cookie = `token=${response.access_token}; path=/; domain=${data.site.siteMetadata.cookieDomain}`;
+
+                    setCookie('token', response.access_token, {
+                        domain: data.site.siteMetadata.cookieDomain,
+                        path: '/'
+                    })
+
+                    setCookie('token_expires', expires_in, {
+                        domain: data.site.siteMetadata.cookieDomain,
+                        path: '/'
+                    })
         
                     if (props.onLogin) {
                         props.onLogin();
