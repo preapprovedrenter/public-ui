@@ -22,28 +22,14 @@ const LoginForm = (props) => {
         isAuthenticated: false
     });
     const [cookies, setCookie, removeCookie] = useCookies([
-        'token', 'token_expires'
+        'preapp_auth_token', 'preapp_auth_token_expires_at'
     ]);
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        removeCookie('token', {
-            domain: data.site.siteMetadata.cookieDomain,
-            path: '/'
-        })
-        removeCookie('token_expires', {
-            domain: data.site.siteMetadata.cookieDomain,
-            path: '/'
-        })
-        removeCookie('token', {
-            domain: 'preapprovedrenter.com',
-            path: '/'
-        })
-        removeCookie('token_expires', {
-            domain: 'preapprovedrenter.com',
-            path: '/'
-        })
+        removeCookie('token')
+        removeCookie('token_expires')
 
         const state = {...auth, loading: true, failure: false};
         setAuth(state);
@@ -66,13 +52,15 @@ const LoginForm = (props) => {
                     const expires_in = 
                         (new Date()).getTime() + (response.expires_in * 1000);
 
-                    setCookie('token', response.access_token, {
+                    setCookie('preapp_auth_token', response.access_token, {
                         domain: data.site.siteMetadata.cookieDomain,
+                        maxAge: response.expires_in * 1000,
                         path: '/'
                     })
 
-                    setCookie('token_expires', expires_in, {
+                    setCookie('preapp_auth_token_expires_at', expires_in, {
                         domain: data.site.siteMetadata.cookieDomain,
+                        maxAge: response.expires_in * 1000,
                         path: '/'
                     })
         

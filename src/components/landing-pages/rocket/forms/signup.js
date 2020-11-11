@@ -17,7 +17,7 @@ const SignupForm = () => {
         }
     `)
     const [cookies, setCookie] = useCookies([
-        'preappQS', 'token', 'token_expires'
+        'preappQS', 'preapp_auth_token', 'preapp_auth_token_expires_at'
     ]);
     const username = useInput('');
     const password = useInput('');
@@ -93,13 +93,15 @@ const SignupForm = () => {
                         const expires_in = (new Date()).getTime() +
                             (result.expires_in * 1000);
 
-                        setCookie('token', result.access_token, {
+                        setCookie('preapp_auth_token', result.access_token, {
                             domain: data.site.siteMetadata.cookieDomain,
+                            maxAge: result.expires_in * 1000,
                             path: '/'
                         })
 
-                        setCookie('token_expires', expires_in, {
+                        setCookie('preapp_auth_token_expires_at', expires_in, {
                             domain: data.site.siteMetadata.cookieDomain,
+                            maxAge: result.expires_in * 1000,
                             path: '/'
                         })
 
