@@ -54,13 +54,13 @@ const LoginForm = (props) => {
 
                     setCookie('preapp_auth_token', response.access_token, {
                         domain: data.site.siteMetadata.cookieDomain,
-                        maxAge: response.expires_in * 1000,
+                        maxAge: response.expires_in,
                         path: '/'
                     })
 
                     setCookie('preapp_auth_token_expires_at', expires_in, {
                         domain: data.site.siteMetadata.cookieDomain,
-                        maxAge: response.expires_in * 1000,
+                        maxAge: response.expires_in,
                         path: '/'
                     })
         
