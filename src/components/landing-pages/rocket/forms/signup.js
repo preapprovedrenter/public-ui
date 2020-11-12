@@ -94,13 +94,11 @@ const SignupForm = () => {
                             (result.expires_in * 1000);
 
                         setCookie('preapp_auth_token', result.access_token, {
-                            domain: data.site.siteMetadata.cookieDomain,
                             maxAge: result.expires_in,
                             path: '/'
                         })
 
                         setCookie('preapp_auth_token_expires_at', expires_in, {
-                            domain: data.site.siteMetadata.cookieDomain,
                             maxAge: result.expires_in,
                             path: '/'
                         })
