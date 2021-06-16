@@ -22,7 +22,7 @@ const LoginForm = (props) => {
         isAuthenticated: false
     });
     const [cookies, setCookie, removeCookie] = useCookies([
-        'preapp_auth_token', 'preapp_auth_token_expires_at'
+        'token', 'token_expires_at'
     ]);
 
     const onSubmit = (e) => {
@@ -52,12 +52,12 @@ const LoginForm = (props) => {
                     const expires_in = 
                         (new Date()).getTime() + (response.expires_in * 1000);
 
-                    setCookie('preapp_auth_token', response.access_token, {
+                    setCookie('token', response.access_token, {
                         maxAge: response.expires_in,
                         path: '/'
                     })
 
-                    setCookie('preapp_auth_token_expires_at', expires_in, {
+                    setCookie('token_expires_at', expires_in, {
                         maxAge: response.expires_in,
                         path: '/'
                     })
