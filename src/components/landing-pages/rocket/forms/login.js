@@ -70,6 +70,7 @@ const LoginForm = (props) => {
                 }
             });
     }
+    const isBrowser = typeof window !== "undefined"
 
     return (
         <form className="mt-5" onSubmit={onSubmit}>
@@ -80,7 +81,7 @@ const LoginForm = (props) => {
                     </div>
                 </div>
             </div> : null}
-            {(window && window.location.search) ? <div className="row justify-content-center">
+            {(isBrowser && window.location.search) ? <div className="row justify-content-center">
                 <div className="col-12 d-flex align-items-center justify-content-center">
                     <div className="alert alert-danger w-100 fmxw-500" role="alert">
                         We were not able to authenticate your access.<br/><br/>
