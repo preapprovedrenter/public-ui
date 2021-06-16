@@ -80,7 +80,21 @@ const LoginForm = (props) => {
                     </div>
                 </div>
             </div> : null}
-
+            {window.location.search ? <div className="row justify-content-center">
+                <div className="col-12 d-flex align-items-center justify-content-center">
+                    <div className="alert alert-danger w-100 fmxw-500" role="alert">
+                        We were not able to authenticate your access.<br/><br/>
+                        Please clear your browser's cache by following the&nbsp;
+                        <a href="https://www.pcmag.com/how-to/how-to-clear-your-cache-on-any-browser"
+                           rel="noreferrer" target="_blank" style={{color: "#fff", fontWeight: "500", textDecoration: "underline"}}>
+                               instructions here</a>.&nbsp;
+                        If you are still having trouble accessing your account please email&nbsp;
+                        <a href="mailto:support@preapprovedrenter.com"
+                           style={{color: "#fff", fontWeight: "500", textDecoration: "underline"}}>
+                               support@preapprovedrenter.com</a>.
+                    </div>
+                </div>
+            </div> : null}
             <fieldset disabled={auth.loading}>
                 <div className="form-group">
                     <div className="input-group">
