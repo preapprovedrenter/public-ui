@@ -548,7 +548,10 @@ reports you want, and your applicants pay for the cost of the reports.</p>
                         <div className="row">
                             <div className="col pb-4 mb-md-0">
                                 <div className="d-flex text-center justify-content-center align-items-center">
-                                    <p className="font-weight-normal font-small mb-0">Copyright © Atomic Innovation LLC <span className="current-year">2020</span>. All rights reserved.</p>
+                                    <p className="font-weight-normal font-small mb-0">
+                                        P2 Verification Services LLC dba Global Verification Network - Copyright&nbsp;
+                                        <span className="current-year">2020</span>. All rights reserved.
+                                    </p>
                                 </div>
                             </div>
                         </div>
