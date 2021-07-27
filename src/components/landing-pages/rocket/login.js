@@ -1,19 +1,26 @@
 import React from "react"
 import LoginForm from './forms/login'
 import { Link } from "gatsby"
+import { useCookies } from 'react-cookie';
 
 const LoginPage = () => {
+    // eslint-disable-next-line
+    const [ cookies, setCookie ] = useCookies([
+        'preapp_redirect_to',
+    ]);
+
     const onLogin = () => {
         var next = '/app/applications';
-        if (window.location.search.indexOf('next') != -1) {
+        if (window.location.search.indexOf('next') !== -1) {
             next = '/app/#!' + window.location.search.slice(window.location.search.indexOf('next') + 5);
             next = window.decodeURI(next);
-        } else if (window.location.search.indexOf('redirectTo') != -1) {
+        } else if (window.location.search.indexOf('redirectTo') !== -1) {
             next = window.location.search.slice(window.location.search.indexOf('redirectTo') + 11);
             next = window.decodeURIComponent(next);
         } else {
             next = '/app/#!' + next;
         }
+        setCookie('preapp_redirect_to', next);
         window.location.href = next;
     }
 
